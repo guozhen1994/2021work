@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-cc clearfix wrap">
+            <div class="logo">
+                <a href=""><img src="images/cf1_02.png"></a>
+                <div class="dd-place">
+                    <span>东坪镇</span>
+                </div>
+            </div>
+            <div class="human">
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf42_03.png"></div>
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf40_03.png"></div>
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf7_03.png"></div>
+                    <!-- <span>刘明宇</span> -->
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf8_03.png"></div>
+                    <div class="i-sound">
+                        <div class="i-sou" style="display: none;">语音播放</div>
+                    </div>
+                </div>
+                <div class="human-li" id="menus">
+                    <div class="h-icon"><img src="images/cf9_03.png"></div>
+                    <div class="menus-box">
+                        <div class="menus-cc">
+                            <a href="">政策文件及解读</a>
+                            <a href="">政府信息公开年报</a>
+                            <a href="">政府信息公开</a>
+                            <a href="">基层政务公开查询</a>
+                            <a href="">基层政务公开专栏</a>
+                            <a href="">依申请公开</a>
+                            <a href="">办事服务</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="wrap">
+            <div class="index-sea clearfix">
+                <div class="search">
+                    <i></i>
+                    <input type="text" class="text" placeholder="请输入搜索内容">
+                    <input type="submit" class="btn" value="">
+                </div>
+            </div>
+        </div>
+
+        <div id="certify">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href=""><img src="images/sf1_03.png" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""><img src="images/sf2_03.png" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""><img src="images/sf3_03.png" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""><img src="images/sf4_03.png" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""><img src="images/sf5_03.png" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""><img src="images/sf6_03.png" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""><img src="images/sf7_03.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+
+    </div>
+
+</body>
+<script src="js/cx.js"></script>
+<script>
+    certifySwiper = new Swiper('#certify .swiper-container', {
+        watchSlidesProgress: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 5,
+        autoplay: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            //clickable :true,
+        },
+        on: {
+            progress: function (progress) {
+                for (i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides.eq(i);
+                    var slideProgress = this.slides[i].progress;
+                    modify = 1;
+                    if (Math.abs(slideProgress) > 1) {
+                        modify = (Math.abs(slideProgress) - 1) * 0.4 + 1;
+                    }
+                    translate = slideProgress * modify * 194 + 'px';
+                    scale = 1 - Math.abs(slideProgress) / 5;
+                    zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                    slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                    slide.css('zIndex', zIndex);
+                    slide.css('opacity', 1);
+                    if (Math.abs(slideProgress) > 3) {
+                        slide.css('opacity', 0);
+                    }
+                }
+            },
+            setTransition: function (transition) {
+                for (var i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides.eq(i)
+                    slide.transition(transition);
+                }
+
+            }
+        }
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线受理申请表</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-cc clearfix wrap">
+            <div class="logo">
+                <a href=""><img src="images/cf1_02.png"></a>
+                <div class="dd-place">
+                    <span>东坪镇</span>
+                </div>
+            </div>
+            <div class="human">
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf42_03.png"></div>
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf40_03.png"></div>
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf7_03.png"></div>
+                    <!-- <span>刘明宇</span> -->
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf8_03.png"></div>
+                    <div class="i-sound">
+                        <div class="i-sou" style="display: none;">语音播放</div>
+                    </div>
+                </div>
+                <div class="human-li" id="menus">
+                    <div class="h-icon"><img src="images/cf9_03.png"></div>
+                    <div class="menus-box">
+                        <div class="menus-cc">
+                            <a href="">政策文件及解读</a>
+                            <a href="">政府信息公开年报</a>
+                            <a href="">政府信息公开</a>
+                            <a href="">基层政务公开查询</a>
+                            <a href="">基层政务公开专栏</a>
+                            <a href="">依申请公开</a>
+                            <a href="">办事服务</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="wrap">
+            <div class="pos-box clearfix">
+                <div class="ss-place">
+                    <span>您所在位置：</span>
+                    <a href="">首页</a>
+                    <em></em>
+                    <a href="">依申请公开</a>
+                    <em></em>
+                    <a>在线受理申请表</a>
+                </div>
+                <div class="prev-page">
+                    <span>返回</span>
+                </div>
+            </div>
+            <div class="shqb-box">
+                <div class="sqb-title">在线受理申请表</div>
+                <div class="online-bz">
+                    <input type="hidden" value="0" id="currentinfoindex" />
+                    <div class="shqb-cc" style="display: block;">
+                        <div class="xt-intro">申请人信息</div>
+                        <div class="sqr-1 sqrinfo">
+                            <label for="gm">
+                                <input type="radio" id="gm" name="sqrinfo" checked>
+                                <span></span>
+                                公民
+                            </label>
+                            <label for="fr">
+                                <input type="radio" id="fr" name="sqrinfo">
+                                <span></span>
+                                法人/其他组织
+                            </label>
+                        </div>
+                        <div class="sqr-2">
+                            <div action="" name="infos" class="infos1gm">
+                                <ul class="clearfix">
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>姓名：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="username">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            工作单位：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>证件名称：
+                                        </div>
+                                        <div class="sqrli-r sqrli-r22">
+                                            <select>
+                                            <option value="">身份证</option>
+                                        </select>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>证件号码：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="card">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>通信地址：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="txaddress">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>邮政编码：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="emailCode">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>联系电话：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="telephone">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>Email地址：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="emailaddress">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sqr-2">
+                            <div action="" name="infos" class="infos1fr">
+                                <ul class="clearfix">
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>名称：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="qyname">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            组织机构代码：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="zzjg">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>法人代表：
+                                        </div>
+                                        <div class="sqrli-r sqrli-r22">
+                                            <select>
+                                            <option value="">身份证</option>
+                                        </select>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>联系人姓名：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="qyusername">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>联系人电话：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="telephone">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            传　　真：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="isCz">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>联系地址：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="lxaddress">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>Email地址：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="emailaddress">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shqb-cc" style="display: none;">
+                        <div class="shqb-cc-1">
+                            <div class="xt-intro">所需信息情况</div>
+                            <form action="" name="infos" class="infos2">
+                                <div class="qktable">
+                                    <div class="qkta1 clearfix">
+                                        <div class="qkta1-l">
+                                            <p class="text-r"><span>*</span><em>所需信息的内容描述：</em></p>
+                                            <p class="text-r"><i>(字数不能超过500字）</i></p>
+                                        </div>
+                                        <div class="qkta1-r">
+                                            <textarea name="nrdesc"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="qkta1 clearfix">
+                                        <div class="qkta1-l">
+                                            <p class="text-r"><span>*</span><em>所需信息的用途：</em></p>
+                                            <p class="text-r"><i>(字数不能超过500字）</i></p>
+                                        </div>
+                                        <div class="qkta1-r">
+                                            <textarea name="usage"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="qkta1 qkta2 clearfix">
+                                        <div class="qkta1-l">
+                                            <p><span>*</span><em>所需信息的指定提供方式（可选）：</em></p>
+                                        </div>
+                                        <div class="qkta1-r">
+                                            <ul class="ulxx">
+                                                <li>
+                                                    <label for="zz">
+                                                    <input type="checkbox" id="zz">
+                                                    <span></span>
+                                                    纸质
+                                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="dzyj">
+                                                    <input type="checkbox" id="dzyj">
+                                                    <span></span>
+                                                    电子邮件
+                                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="gp">
+                                                    <input type="checkbox" id="gp">
+                                                    <span></span>
+                                                    光盘
+                                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="qt">
+                                                    <input type="checkbox" id="qt">
+                                                    <span></span>
+                                                    其他（请注明）
+                                                </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="qkta1 qkta2 qkta3 clearfix">
+                                        <div class="qkta1-l">
+                                            <p><span>*</span><em>获取信息的方式（可选）：</em></p>
+                                        </div>
+                                        <div class="qkta1-r">
+                                            <ul class="ulxx">
+                                                <li>
+                                                    <label for="yj">
+                                                    <input type="checkbox" id="yj" name="ways">
+                                                    <span></span>
+                                                    邮寄
+                                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="dccy">
+                                                    <input type="checkbox" id="dccy" name="ways">
+                                                    <span></span>
+                                                    当场查阅
+                                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="yj">
+                                                    <input type="checkbox" id="yj" name="ways">
+                                                    <span></span>
+                                                    电子邮件
+                                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="cz">
+                                                    <input type="checkbox" id="cz" name="ways">
+                                                    <span></span>
+                                                    传真
+                                                </label>
+                                                </li>
+                                                <li class="li5">
+                                                    <label for="lq">
+                                                    <input type="checkbox" id="lq"  name="ways">
+                                                    <span></span>
+                                                    自行领取/当场阅读、抄录
+                                                </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="shqb-cc" style="display: none;">
+                        <div class="shqb-cc-1">
+                            <div class="xt-intro">所需信息的机关单位</div>
+                            <form action="" name="infos" class="infos3">
+                                <div class="jgdw-box">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <label for="11">
+                                            <input type="radio" id="11">
+                                            <span></span>
+                                            益阳市发展和改革委员会
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="12">
+                                            <input type="radio" id="12">
+                                            <span></span>
+                                            益阳市工业和信息化局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市卫生健康委员会
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="14">
+                                            <input type="radio" id="14">
+                                            <span></span>
+                                            益阳市教育局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="15">
+                                            <input type="radio" id="15">
+                                            <span></span>
+                                            益阳市科学技术局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市生态环境局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="16">
+                                            <input type="radio" id="16">
+                                            <span></span>
+                                            益阳市公安局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="17">
+                                            <input type="radio" id="17">
+                                            <span></span>
+                                            益阳市民政局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="18">
+                                            <input type="radio" id="18">
+                                            <span></span>
+                                            益阳市退役军人事务局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="19">
+                                            <input type="radio" id="19">
+                                            <span></span>
+                                            益阳市发展和改革委员会
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="20">
+                                            <input type="radio" id="20">
+                                            <span></span>
+                                            益阳市工业和信息化局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="21">
+                                            <input type="radio" id="21">
+                                            <span></span>
+                                            益阳市卫生健康委员会
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="22">
+                                            <input type="radio" id="22">
+                                            <span></span>
+                                            益阳市教育局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="23">
+                                            <input type="radio" id="23">
+                                            <span></span>
+                                            益阳市科学技术局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="24">
+                                            <input type="radio" id="24">
+                                            <span></span>
+                                            益阳市生态环境局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="25">
+                                            <input type="radio" id="25">
+                                            <span></span>
+                                            益阳市公安局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="26">
+                                            <input type="radio" id="26">
+                                            <span></span>
+                                            益阳市民政局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="27">
+                                            <input type="radio" id="27">
+                                            <span></span>
+                                            益阳市退役军人事务局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="28">
+                                            <input type="radio" id="28">
+                                            <span></span>
+                                            益阳市科学技术局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="29">
+                                            <input type="radio" id="29">
+                                            <span></span>
+                                            益阳市生态环境局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="11">
+                                            <input type="radio" id="11">
+                                            <span></span>
+                                            益阳市公安局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="12">
+                                            <input type="radio" id="12">
+                                            <span></span>
+                                            益阳市民政局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市退役军人事务局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="12">
+                                            <input type="radio" id="12">
+                                            <span></span>
+                                            益阳市科学技术局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市生态环境局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="11">
+                                            <input type="radio" id="11">
+                                            <span></span>
+                                            益阳市公安局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="12">
+                                            <input type="radio" id="12">
+                                            <span></span>
+                                            益阳市民政局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市退役军人事务局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="12">
+                                            <input type="radio" id="12">
+                                            <span></span>
+                                            益阳市科学技术局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市生态环境局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="11">
+                                            <input type="radio" id="11">
+                                            <span></span>
+                                            益阳市公安局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="12">
+                                            <input type="radio" id="12">
+                                            <span></span>
+                                            益阳市民政局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市退役军人事务局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="12">
+                                            <input type="radio" id="12">
+                                            <span></span>
+                                            益阳市科学技术局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市生态环境局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="11">
+                                            <input type="radio" id="11">
+                                            <span></span>
+                                            益阳市公安局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="12">
+                                            <input type="radio" id="12">
+                                            <span></span>
+                                            益阳市民政局
+                                        </label>
+                                        </li>
+                                        <li>
+                                            <label for="13">
+                                            <input type="radio" id="13">
+                                            <span></span>
+                                            益阳市退役军人事务局
+                                        </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sfz-li2">
+                                    <em>请输入验证码：</em>
+                                    <input type="text" class="put-1">
+                                    <div class="yzm-img"><img src="images/cf104_03.png"></div>
+                                </div>
+                            </form>
+                            <div class="tj-submit">
+                                <a href="javascript:;">提交</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="shqb-cc" style="display: none;">
+                        <div class="shqb-cc-1">
+                            <div class="xt-intro">上传身份证等相关证明</div>
+                            <div class="sfz-box">
+                                <div class="sfz-li1">
+                                    <span>*</span>
+                                    <em>上传身份证等相关证明材料的复印件</em>
+                                    <div class="add-file file-btn">增加附件</div>
+                                    <div class="remove-file file-btn">清除</div>
+                                    <div class="file-save"></div>
+                                </div>
+                                <div class="sfz-li2">
+                                    <em>请输入验证码：</em>
+                                    <input type="text" class="put-1">
+                                    <div class="yzm-img"><img src="images/cf104_03.png"></div>
+                                </div>
+                                <div class="tj-submit">
+                                    <a href="javascript:;">提交</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="page-fun">
+                    <span class="shang">上一步</span>
+                    <span class="xia">下一步</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="js/cx.js"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="js/card.js" type="text/javascript"></script>
+<script>
+    $(".shang").hide();
+    var totalblcok = $(".shqb-cc").length;
+    $(".xia").click(function() {
+        var index = parseInt($("#currentinfoindex").val()) + 1;
+        if (index == 1) {
+            if ($('.infos1' + $(".sqrinfo input[name='sqrinfo']:checked").attr("id")).valid()) {
+                $(".shang").show();
+                $(".shqb-cc").hide();
+                if (index == totalblcok - 1) {
+                    $(this).hide();
+                }
+                $(".shqb-cc").eq(index).show();
+                $("#currentinfoindex").val(index);
+            }
+        } else {
+            if ($('.infos' + index).valid()) {
+                $(".shang").show();
+                $(".shqb-cc").hide();
+
+                if (index == totalblcok - 1) {
+                    $(this).hide();
+                }
+                $(".shqb-cc").eq(index).show();
+                $("#currentinfoindex").val(index);
+            }
+        }
+    });
+    $(".shang").click(function() {
+        $(".xia").show();
+        $(".shqb-cc").hide();
+        var index = parseInt($("#currentinfoindex").val()) - 1;
+        if (index == 0) {
+            $(this).hide();
+        }
+        $(".shqb-cc").eq(index).show();
+        $("#currentinfoindex").val(index);
+    });
+    // 身份证号码验证
+
+    jQuery.validator.addMethod("isIdCardNo", function(value, element) {
+        return this.optional(element) || idCardNoUtil.checkIdCardNo(value);
+    }, "请输入正确的证件号码");
+    jQuery.validator.addMethod("emailCode", function(value, element) {
+        var tel = /^[1-9]\d{5}$/i;
+        return this.optional(element) || (tel.test(value));
+    }, "请输入正确的邮政编码");
+    jQuery.validator.addMethod("telephone", function(value, element) {
+        var length = value.length;
+        var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+        var tel = /^\d{3,4}-?\d{7,9}$/;
+        return this.optional(element) || (tel.test(value) || mobile.test(value));
+    }, "请输入正确的联系电话");
+    jQuery.validator.addMethod("isCz", function(v, e) {
+        return this.optional(e) || /^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/.test(v);
+    }, "请输入正确的传真");
+    jQuery.validator.addMethod("iszzjg", function(v, e) {
+        return this.optional(e) || /[0-9A-HJ-NPQRTUWXY]{8}-[0-9A-HJ-NPQRTUWXY]/.test(v) || /[0-9A-HJ-NPQRTUWXY]{9}/.test(v);
+    }, "请输入正确的组织机构代码");
+    // 中文字两个字节
+    jQuery.validator.addMethod("byteRangeLength", function(value, element, param) {
+        var length = value.length;
+        for (var i = 0; i < value.length; i++) {
+            if (value.charCodeAt(i) > 127) {
+                length++;
+            }
+        }
+        return this.optional(element) || (length >= param[0] && length <= param[1]);
+    }, "请输入正确的用户名");
+    $(function() {
+        $('.infos1gm').validate({
+            debug: false, //false表示验证通过后不要自动提交表单
+            onkeyup: false, //表示关闭按键松开时候监听验证
+            rules: { //验证规则
+                username: {
+                    required: true, //必填字段
+                    byteRangeLength: [2, 10] //长度在6-10之间
+                },
+                card: {
+                    required: true,
+                    isIdCardNo: true
+                },
+                txaddress: {
+                    required: true,
+                },
+                telephone: {
+                    required: true,
+                    telephone: true
+                },
+                emailCode: {
+                    required: true,
+                    emailCode: true
+                },
+                emailaddress: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+                username: {
+                    required: "用户名必填",
+                    byteRangeLength: "请输入正确的用户名"
+                },
+                card: {
+                    required: "请输入证件号码",
+                    isIdCardNo: "请输入正确的证件号码"
+                },
+                txaddress: {
+                    required: "请输入通信地址",
+                },
+                lxaddress: {
+                    required: "请输入联系地址",
+                },
+                telephone: {
+                    required: "请输入联系电话",
+                    telephone: "请输入正确的联系电话"
+                },
+                emailCode: {
+                    required: "请输入邮政编码",
+                    emailCode: "请输入正确的邮政编码"
+                },
+                emailaddress: {
+                    required: "请输入Email地址",
+                    email: "请输入正确的Email地址"
+                }
+            },
+            onfocusout: function(element) {
+                $(element).valid();
+            },
+
+        });
+        $('.infos1fr').validate({
+            debug: false, //false表示验证通过后不要自动提交表单
+            onkeyup: false, //表示关闭按键松开时候监听验证
+            rules: { //验证规则
+                qyusername: {
+                    required: true, //必填字段
+                    byteRangeLength: [2, 10] //长度在6-10之间
+                },
+                qyname: {
+                    required: true, //必填字段
+                    byteRangeLength: [2, 10] //长度在6-10之间
+                },
+                zzjg: {
+                    iszzjg: true
+                },
+                card: {
+                    required: true,
+                    isIdCardNo: true
+                },
+                lxaddress: {
+                    required: true,
+                },
+                telephone: {
+                    required: true,
+                    telephone: true
+                },
+                emailCode: {
+                    required: true,
+                    emailCode: true
+                },
+                emailaddress: {
+                    required: true,
+                    email: true
+                },
+                isCz: {
+                    isCz: true
+                }
+            },
+            messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+                qyname: {
+                    required: "名称必填",
+                    byteRangeLength: "请输入正确的名称"
+                },
+                qyusername: {
+                    required: "联系人姓名必填",
+                    byteRangeLength: "请输入正确的联系人姓名"
+                },
+                card: {
+                    required: "请输入证件号码",
+                    isIdCardNo: "请输入正确的证件号码"
+                },
+                zzjg: {
+                    isIdCardNo: "请输入正确的组织机构"
+                },
+                lxaddress: {
+                    required: "请输入联系地址",
+                },
+                telephone: {
+                    required: "请输入联系人电话",
+                    telephone: "请输入正确的联系人电话"
+                },
+                emailCode: {
+                    required: "请输入邮政编码",
+                    emailCode: "请输入正确的邮政编码"
+                },
+                emailaddress: {
+                    required: "请输入Email地址",
+                    email: "请输入正确的Email地址"
+                },
+                isCz: {
+                    isCz: "请输入正确的传真"
+                }
+            },
+            onfocusout: function(element) {
+                $(element).valid();
+            },
+
+        });
+        $('.infos2').validate({
+            debug: false, //false表示验证通过后不要自动提交表单
+            onkeyup: false, //表示关闭按键松开时候监听验证
+            rules: { //验证规则
+                nrdesc: {
+                    required: true, //必填字段
+                    minlength: 1,
+                    maxlength: 500
+                },
+                usage: {
+                    required: true, //必填字段
+                    minlength: 1,
+                    maxlength: 500
+                }
+            },
+            messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+                nrdesc: {
+                    required: "必填",
+                    minlength: "请输入1~500的字数",
+                    maxlength: "请输入1~500的字数"
+                },
+                usage: {
+                    required: "必填",
+                    minlength: "请输入1~500的字数",
+                    maxlength: "请输入1~500的字数"
+                }
+            },
+            onfocusout: function(element) {
+                $(element).valid();
+            },
+
+        });
+    });
+</script>
+
+</html>

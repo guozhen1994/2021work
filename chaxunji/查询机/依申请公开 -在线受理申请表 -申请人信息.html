@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线受理申请表</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-cc clearfix wrap">
+            <div class="logo">
+                <a href=""><img src="images/cf1_02.png"></a>
+                <div class="dd-place">
+                    <span>东坪镇</span>
+                </div>
+            </div>
+            <div class="human">
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf42_03.png"></div>
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf40_03.png"></div>
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf7_03.png"></div>
+                    <!-- <span>刘明宇</span> -->
+                </div>
+                <div class="human-li">
+                    <div class="h-icon"><img src="images/cf8_03.png"></div>
+                    <div class="i-sound">
+                        <div class="i-sou" style="display: none;">语音播放</div>
+                    </div>
+                </div>
+                <div class="human-li" id="menus">
+                    <div class="h-icon"><img src="images/cf9_03.png"></div>
+                    <div class="menus-box">
+                        <div class="menus-cc">
+                            <a href="">政策文件及解读</a>
+                            <a href="">政府信息公开年报</a>
+                            <a href="">政府信息公开</a>
+                            <a href="">基层政务公开查询</a>
+                            <a href="">基层政务公开专栏</a>
+                            <a href="">依申请公开</a>
+                            <a href="">办事服务</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="wrap">
+            <div class="pos-box clearfix">
+                <div class="ss-place">
+                    <span>您所在位置：</span>
+                    <cms:more channel="查询机" moretext="首页" target="_top"></cms:more> <em></em>
+                    <cms:more channel="依申请公开35600" moretext="依申请公开" target="_top"></cms:more> <em></em>
+                    <cms:more channel="在线受理" moretext="在线受理" target="_top"></cms:more>
+                </div>
+                <div class="prev-page" onclick="javascript:window.history.go(-1); ">
+                    <span>返回</span>
+                </div>
+            </div>
+            <form id="form1" method="post">
+                <input name="siteId" id="siteId" type="hidden" value="96" />
+                <input name="mOrgId" id="mOrgId" type="hidden" value="14" />
+                <div class="shqb-box">
+                    <div class="sqb-title">在线受理申请表</div>
+                    <div class="online-bz">
+                        <input type="hidden" value="0" id="currentinfoindex" />
+                        <div class="shqb-cc" style="display: block;">
+                            <div class="xt-intro">申请人信息</div>
+                            <div class="sqr-1 sqrinfo">
+                                <label for="applyerType_1">
+                <input type="radio" id="applyerType_1" name="type" data-type="gm" value="1" checked>
+                <span></span>
+                公民
+            </label>
+                                <label for="applyerType_2">
+                <input type="radio" id="applyerType_2" name="type" data-type="fr" value="2">
+                <span></span>
+                法人/其他组织
+            </label>
+                            </div>
+                            <div class="sqr-2" id="dataContainer1">
+                                <ul class="clearfix">
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>姓名：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="gm_name">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            工作单位：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="gz_work_unit">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>证件名称：
+                                        </div>
+                                        <div class="sqrli-r sqrli-r22">
+                                            <select name="gm_document_name" id="zjmc">
+                            <option value="">身份证</option>
+                        </select>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>证件号码：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="gm_document_number">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>通信地址：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="gm_address">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>邮政编码：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="gm_postalcode">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>联系电话：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="gm_tel">
+                                        </div>
+                                        <div class="sqrli-r" style="display:none;">
+                                            <input name="gm_fax" type="text" />
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>Email地址：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="gm_email">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sqr-2" id="dataContainer2">
+                                <ul class="clearfix">
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>名称：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="fr_name">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            组织机构代码：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="fr_work_unit">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>法人代表：
+                                        </div>
+                                        <div class="sqrli-r sqrli-r22">
+                                            <input type="text" class="ip1" name="fr_document_name">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>联系人姓名：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="fr_document_number">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>联系人电话：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="fr_tel">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            营业执照：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="blicense">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>联系地址：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="fr_address">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="sqrli-l">
+                                            <span>*</span>Email地址：
+                                        </div>
+                                        <div class="sqrli-r">
+                                            <input type="text" class="ip1" name="fr_email">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="shqb-cc" style="display: none;">
+                            <div class="shqb-cc-1">
+                                <div class="xt-intro">所需信息情况</div>
+
+                                <div class="qktable">
+                                    <div class="qkta1 clearfix">
+                                        <div class="qkta1-l">
+                                            <p class="text-r"><span>*</span><em>所需信息的内容描述：</em></p>
+                                            <p class="text-r"><i>(字数不能超过500字）</i></p>
+                                        </div>
+                                        <div class="qkta1-r">
+                                            <textarea name="content"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="qkta1 clearfix">
+                                        <div class="qkta1-l">
+                                            <p class="text-r"><span>*</span><em>所需信息的用途：</em></p>
+                                            <p class="text-r"><i>(字数不能超过500字）</i></p>
+                                        </div>
+                                        <div class="qkta1-r">
+                                            <textarea name="use"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="qkta1 qkta2 clearfix">
+                                        <div class="qkta1-l">
+                                            <p><span>*</span><em>所需信息的指定提供方式（可选）：</em></p>
+                                        </div>
+                                        <div class="qkta1-r">
+                                            <ul class="ulxx">
+                                                <li>
+                                                    <label for="zz">
+                                    <input type="checkbox" id="zz" name="setinfo_way">
+                                    <span></span>
+                                    纸质
+                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="dzyj">
+                                    <input type="checkbox" id="dzyj" name="setinfo_way">
+                                    <span></span>
+                                    电子邮件
+                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="gp">
+                                    <input type="checkbox" id="gp" name="setinfo_way">
+                                    <span></span>
+                                    光盘
+                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="qt">
+                                    <input type="checkbox" id="qt" name="setinfo_way">
+                                    <span></span>
+                                    其他（请注明）
+                                </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="qkta1 qkta2 qkta3 clearfix">
+                                        <div class="qkta1-l">
+                                            <p><span>*</span><em>获取信息的方式（可选）：</em></p>
+                                        </div>
+                                        <div class="qkta1-r">
+                                            <ul class="ulxx">
+                                                <li>
+                                                    <label for="yj">
+                                    <input type="checkbox" id="yj" name="getinfo_way">
+                                    <span></span>
+                                    邮寄
+                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="dccy">
+                                    <input type="checkbox" id="dccy" name="getinfo_way">
+                                    <span></span>
+                                    当场查阅
+                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="yj">
+                                    <input type="checkbox" id="yj" name="wgetinfo_wayays" checked="checked">
+                                    <span></span>
+                                    电子邮件
+                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="cz">
+                                    <input type="checkbox" id="cz" name="getinfo_way">
+                                    <span></span>
+                                    传真
+                                </label>
+                                                </li>
+                                                <li class="li5">
+                                                    <label for="lq">
+                                    <input type="checkbox" id="lq"  name="getinfo_way">
+                                    <span></span>
+                                    自行领取/当场阅读、抄录
+                                </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shqb-cc" style="display: none;">
+                            <div class="shqb-cc-1">
+                                <div class="xt-intro">所需信息的机关单位</div>
+
+                                <div class="jgdw-box">
+                                    <ul class="clearfix">
+                                        <% int radio_num = 0; %>
+                                            <cms:outline datatype="org" channel="14">
+                                                <%int orgNum =0; 
+      String orgId = dataSet.getString("orgId");
+      if(!orgId.equals("114")){
+      %>
+                                                    <cms:outline datatype="org" channel='<%=dataSet.getString("orgId") %>'>
+                                                        <%orgNum++;radio_num++;String orgName = dataSet.getString("orgName"); %>
+                                                            <%if(radio_num == 1) {%>
+                                                                <li>
+                                                                    <label for='radio_<%=orgNum %>'>
+                            <input type="radio" name="org_id" value='<cms:cell colName="orgId"/>' id="radio_<%=orgNum %>" checked="checked">
+                            <span></span>
+                            <cms:cell colName="remark5"/>
+                        </label>
+                                                                </li>
+                                                                <%}else{ %>
+                                                                    <li>
+                                                                        <label for='radio_<%=orgNum %>'>
+                            <input type="radio" name="org_id" value='<cms:cell colName="orgId"/>' id="radio_<%=orgNum %>">
+                            <span></span>
+                            <cms:cell colName="remark5"/>
+                        </label>
+                                                                    </li>
+                                                                    <%} %>
+                                                    </cms:outline>
+                                                    <%} %>
+                                            </cms:outline>
+                                    </ul>
+                                </div>
+                                <div class="sfz-li2">
+
+                                    <em>请输入验证码：</em>
+                                    <input type="text" name="randCode" onclick="getVerify()" onkeyup="clearSpaceAll(this)" />
+
+                                    <input type="text" class="put-1">
+                                    <div class="yzm-img"><img name="VerifyCode" id="VerifyCode" width="51px" src="<%=request.getContextPath() %>/include/cms/jsp/VerifyCode.jsp" title="看不清楚?请点击刷新验证码" style="cursor:pointer;vertical-align: middle" onClick="this.src='<%=request.getContextPath() %>/include/cms/jsp/VerifyCode.jsp?'+Math.random()"
+                                            align="bottom" /></div>
+                                </div>
+
+                                <div class="tj-submit">
+                                    <a href="javascript:;" onclick="subInfo();">提交</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="shqb-cc" style="display: none;">
+        <div class="shqb-cc-1">
+            <div class="xt-intro">上传身份证等相关证明</div>
+            <div class="sfz-box">
+                <div class="sfz-li1">
+                    <span>*</span>
+                    <em>上传身份证等相关证明材料的复印件</em>
+                    <div class="add-file file-btn">增加附件</div>
+                    <div class="remove-file file-btn">清除</div>
+                    <div class="file-save"></div>
+                </div>
+                <div class="sfz-li2">
+                    <em>请输入验证码：</em>
+                    <input type="text" class="put-1">
+                    <div class="yzm-img"><img src="images/cf104_03.png"></div>
+                </div>
+                <div class="tj-submit">
+                    <a href="javascript:;">提交</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+                    </div>
+                    <div class="page-fun">
+                        <span class="shang">上一步</span>
+                        <span class="xia">下一步</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="js/cx.js"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="js/card.js" type="text/javascript"></script>
+<script>
+    $(".shang").hide();
+    var totalblcok = $(".shqb-cc").length;
+    $(".xia").click(function() {
+        var index = parseInt($("#currentinfoindex").val()) + 1;
+        if ($("#form1").valid()) {
+            $(".shang").show();
+            $(".shqb-cc").hide();
+            if (index == totalblcok - 1) {
+                $(this).hide();
+            }
+            $(".shqb-cc").eq(index).show();
+            $("#currentinfoindex").val(index);
+        }
+    });
+    $(".shang").click(function() {
+        $(".xia").show();
+        $(".shqb-cc").hide();
+        var index = parseInt($("#currentinfoindex").val()) - 1;
+        if (index == 0) {
+            $(this).hide();
+        }
+        $(".shqb-cc").eq(index).show();
+        $("#currentinfoindex").val(index);
+    });
+    // 身份证号码验证
+
+    jQuery.validator.addMethod("isIdCardNo", function(value, element) {
+        return this.optional(element) || idCardNoUtil.checkIdCardNo(value);
+    }, "请输入正确的证件号码");
+    jQuery.validator.addMethod("emailCode", function(value, element) {
+        var tel = /^[1-9]\d{5}$/i;
+        return this.optional(element) || (tel.test(value));
+    }, "请输入正确的邮政编码");
+    jQuery.validator.addMethod("telephone", function(value, element) {
+        var length = value.length;
+        var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+        var tel = /^\d{3,4}-?\d{7,9}$/;
+        return this.optional(element) || (tel.test(value) || mobile.test(value));
+    }, "请输入正确的联系电话");
+    jQuery.validator.addMethod("isCz", function(v, e) {
+        return this.optional(e) || /^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/.test(v);
+    }, "请输入正确的传真");
+    jQuery.validator.addMethod("iszzjg", function(v, e) {
+        return this.optional(e) || /[0-9A-HJ-NPQRTUWXY]{8}-[0-9A-HJ-NPQRTUWXY]/.test(v) || /[0-9A-HJ-NPQRTUWXY]{9}/.test(v);
+    }, "请输入正确的组织机构代码");
+    // 中文字两个字节
+    jQuery.validator.addMethod("byteRangeLength", function(value, element, param) {
+        var length = value.length;
+        for (var i = 0; i < value.length; i++) {
+            if (value.charCodeAt(i) > 127) {
+                length++;
+            }
+        }
+        return this.optional(element) || (length >= param[0] && length <= param[1]);
+    }, "请输入正确的用户名");
+    $(function() {
+        $("#form1").validate({
+            debug: false, //false表示验证通过后不要自动提交表单
+            onkeyup: false, //表示关闭按键松开时候监听验证
+            rules: { //验证规则
+                gm_name: {
+                    required: true, //必填字段
+                    byteRangeLength: [2, 10] //长度在6-10之间
+                },
+                gm_document_number: {
+                    required: true,
+                    isIdCardNo: true
+                },
+                gm_address: {
+                    required: true,
+                },
+                gm_tel: {
+                    required: true,
+                    telephone: true
+                },
+                gm_postalcode: {
+                    required: true,
+                    emailCode: true
+                },
+                gm_email: {
+                    required: true,
+                    email: true
+                },
+                fr_name: {
+                    required: true, //必填字段
+                    byteRangeLength: [2, 10] //长度在6-10之间
+                },
+                fr_document_number: {
+                    required: true, //必填字段
+                    byteRangeLength: [2, 10] //长度在6-10之间
+                },
+                fr_work_unit: {
+                    iszzjg: true
+                },
+                fr_address: {
+                    required: true,
+                },
+                fr_tel: {
+                    required: true,
+                    telephone: true
+                },
+                fr_email: {
+                    required: true,
+                    email: true
+                },
+                isCz: {
+                    isCz: true
+                },
+                content: {
+                    required: true, //必填字段
+                    minlength: 1,
+                    maxlength: 500
+                },
+                use: {
+                    required: true, //必填字段
+                    minlength: 1,
+                    maxlength: 500
+                }
+            },
+            messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+                gm_name: {
+                    required: "用户名必填",
+                    byteRangeLength: "请输入正确的用户名"
+                },
+                gm_document_number: {
+                    required: "请输入证件号码",
+                    isIdCardNo: "请输入正确的证件号码"
+                },
+                gm_address: {
+                    required: "请输入通信地址",
+                },
+                gm_tel: {
+                    required: "请输入联系电话",
+                    telephone: "请输入正确的联系电话"
+                },
+                gm_postalcode: {
+                    required: "请输入邮政编码",
+                    emailCode: "请输入正确的邮政编码"
+                },
+                gm_email: {
+                    required: "请输入Email地址",
+                    email: "请输入正确的Email地址"
+                },
+                fr_name: {
+                    required: "名称必填",
+                    byteRangeLength: "请输入正确的名称"
+                },
+                fr_document_number: {
+                    required: "联系人姓名必填",
+                    byteRangeLength: "请输入正确的联系人姓名"
+                },
+                fr_work_unit: {
+                    isIdCardNo: "请输入正确的组织机构"
+                },
+                fr_address: {
+                    required: "请输入联系地址",
+                },
+                fr_tel: {
+                    required: "请输入联系人电话",
+                    telephone: "请输入正确的联系人电话"
+                },
+                fr_email: {
+                    required: "请输入Email地址",
+                    email: "请输入正确的Email地址"
+                },
+                isCz: {
+                    isCz: "请输入正确的传真"
+                },
+                content: {
+                    required: "必填",
+                    minlength: "请输入1~500的字数",
+                    maxlength: "请输入1~500的字数"
+                },
+                use: {
+                    required: "必填",
+                    minlength: "请输入1~500的字数",
+                    maxlength: "请输入1~500的字数"
+                }
+            },
+            onfocusout: function(element) {
+                $(element).valid();
+            },
+
+        });
+        // $('.infos1fr').validate({
+        //     debug: false, //false表示验证通过后不要自动提交表单
+        //     onkeyup: false, //表示关闭按键松开时候监听验证
+        //     rules: { //验证规则
+        //         fr_name: {
+        //             required: true, //必填字段
+        //             byteRangeLength: [2, 10] //长度在6-10之间
+        //         },
+        //         fr_document_number: {
+        //             required: true, //必填字段
+        //             byteRangeLength: [2, 10] //长度在6-10之间
+        //         },
+        //         fr_work_unit: {
+        //             iszzjg: true
+        //         },
+        //         fr_address: {
+        //             required: true,
+        //         },
+        //         fr_tel: {
+        //             required: true,
+        //             telephone: true
+        //         },
+        //         fr_email: {
+        //             required: true,
+        //             email: true
+        //         },
+        //         isCz: {
+        //             isCz: true
+        //         }
+        //     },
+        //     messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+
+        //     },
+        //     onfocusout: function(element) {
+        //         $(element).valid();
+        //     },
+
+        // });
+        // $('.infos2').validate({
+        //     debug: false, //false表示验证通过后不要自动提交表单
+        //     onkeyup: false, //表示关闭按键松开时候监听验证
+        //     rules: { //验证规则
+        //         nrdesc: {
+        //             required: true, //必填字段
+        //             minlength: 1,
+        //             maxlength: 500
+        //         },
+        //         usage: {
+        //             required: true, //必填字段
+        //             minlength: 1,
+        //             maxlength: 500
+        //         }
+        //     },
+        //     messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+        //         nrdesc: {
+        //             required: "必填",
+        //             minlength: "请输入1~500的字数",
+        //             maxlength: "请输入1~500的字数"
+        //         },
+        //         usage: {
+        //             required: "必填",
+        //             minlength: "请输入1~500的字数",
+        //             maxlength: "请输入1~500的字数"
+        //         }
+        //     },
+        //     onfocusout: function(element) {
+        //         $(element).valid();
+        //     },
+
+        // });
+    });
+</script>
+
+</html>

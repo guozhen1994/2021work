@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="gb2312">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>郴州教育局</title>
+    <link rel="stylesheet" href="css/KCUI3.Utility.css">
+    <link rel="stylesheet" href="css/KCUI3.min.css">
+    <link rel="stylesheet" href="css/jyjcs.css">
+    <link rel="stylesheet" href="css/slick.css">
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="w1200">
+            <div class="header-con clearfix">
+                <div class="top-logo"><img src="images/logo.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <div class="content clearfix">
+        <div class="zxdtbg">
+            <div class="w1200">
+                <div class="index_title">
+                    <div class="method_title">
+                        <span>最新动态</span>
+                    </div>
+                    <img src="./images/zxdt.png" />
+                    <a href="javascript:;" class="moretitle">更多+</a>
+                </div>
+                <div class="zxdt_box">
+                    <div class="box_left">
+                        <div class="slider single-item">
+                            <div>
+                                <div class="sli-qybox">
+                                    <a href=""><img src="./images/slick_03.jpg"> </a>
+                                    <div class="sli-qy">
+                                        <a>邓涛主持召开2021年第16次县委常委会</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="sli-qybox">
+                                    <a href=""><img src="./images/slick_03.jpg"> </a>
+                                    <div class="sli-qy">
+                                        <a>邓涛主持召开2021年第16次县委常委会</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="sli-qybox">
+                                    <a href=""><img src="./images/slick_03.jpg"> </a>
+                                    <div class="sli-qy">
+                                        <a>邓涛主持召开2021年第16次县委常委会</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_right">
+                        <ul class="glist clearfix">
+                            <li><a href="">教育之光照亮未来--郴州市坚持办好人民满意的教育工作综述 公费定向培养师范生报名入口 嘉禾县2021年初中学业水平考试顺利结束</a></li>
+                            <li><a href="">公费定向培养师范生报名入口</a></li>
+                            <li><a href="">嘉禾县2021年初中学业水平考试顺利结束</a></li>
+                            <li><a href="">肖正科到桂阳县暗访督查校园安全和学生防溺水工作</a></li>
+                            <li><a href="">（市直机关幼儿园）逐梦不负芳华，实践共促成长</a></li>
+                        </ul>
+                        <a class="more" href="javascript:;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 最新动态 -->
+        <div class="xsqzsbg">
+            <div class="w1200">
+                <div class="index_title">
+                    <div class="method_title">
+                        <span>县市区展示</span>
+                    </div>
+                    <img src="./images/xsqzs.png" />
+                    <a href="javascript:;" class="moretitle">更多+</a>
+                </div>
+                <div class="slider xsqzs-item">
+                    <div>
+                        <div class="sli-qybox">
+                            <a href=""><img src="./images/czjyj_18.png"> </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sli-qybox">
+                            <a href=""><img src="./images/czjyj_18.png"> </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sli-qybox">
+                            <a href=""><img src="./images/czjyj_18.png"> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 县市区展示 -->
+
+        <div class="xxzsbg">
+            <div class="w1200 clearfix">
+                <div class="index_title">
+                    <div class="method_title">
+                        <span>学校展示</span>
+                    </div>
+                    <div class="title"></div>
+                    <img src="./images/xxzs.png" />
+                    <a href="javascript:;" class="moretitle">更多+</a>
+                </div>
+                <div class="slider xxzs-item">
+                    <div>
+                        <div class="sli-qybox">
+                            <a href=""><img src="./images/czjyj_18.png"> </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sli-qybox">
+                            <a href=""><img src="./images/czjyj_18.png"> </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sli-qybox">
+                            <a href=""><img src="./images/czjyj_18.png"> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 学校展示 -->
+    </div>
+
+    <script src="./js/foot.js" charset="gb2312"></script>
+    <!-- footer -->
+    <script src="js/jquery.min3.5.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $(".navbar").on("click", "li", function(event) {
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+        });
+        $('.single-item').slick({
+            arrows: true,
+            dots: true,
+            autoplay: false,
+            autoplaySpeed: 6000
+        });
+        $('.xsqzs-item').slick({
+            arrows: true,
+            dots: true,
+            autoplay: false,
+            autoplaySpeed: 6000
+        });
+        $('.xxzs-item').slick({
+            arrows: true,
+            dots: true,
+            autoplay: false,
+            autoplaySpeed: 6000
+        });
+    </script>
+</body>
+
+</html>
