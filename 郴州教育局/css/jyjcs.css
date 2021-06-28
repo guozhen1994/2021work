@@ -1329,6 +1329,16 @@ img {
     color: #999
 }
 
+.single-item .slick-slide img {
+    height: 100%;
+}
+
+.xsqzs-item .slick-slide img,
+.xxzs-item .slick-slide img {
+    width: 100%;
+    max-height: 660px;
+}
+
 
 /* footer */
 
