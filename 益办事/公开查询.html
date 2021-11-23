@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公开查询</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/wap_adaptive.js"></script>
+    <script>
+        window['adaptive'].desinWidth = 1080;
+        window['adaptive'].init();
+    </script>
+
+</head>
+
+<body>
+    <header class="header-img">
+        <img src="images/gf15_01.jpg">
+    </header>
+    <div class="main">
+        <section class="sec-nav">
+            <a href="./受理指南.html" class="item item_zn">
+                <img src="images/gktab_zn.png">
+                <span>受理指南</span>
+            </a>
+            <a href="./受理流程.html" class="item item_lc">
+                <img src="images/gktab_lc.png">
+                <span>受理流程</span>
+            </a>
+            <a href="./在线受理.html" class="item item_zx">
+                <img src="images/gktab_cx.png">
+                <span>在线受理</span>
+            </a>
+        </section>
+        <section class="sec-b1">
+            <div class="tabs tab-title">
+                <span class="active">依申请公开查询</span>
+            </div>
+            <div class="tabs-container">
+                <div class="cxform">
+                    <p class="cxtitle">依申请公开查询码：</p>
+                    <div class="yzmblock">
+                        <input class="cx_code" />
+                    </div>
+                    <p class="cxtitle">请输入验证码：</p>
+                    <div class="yzmblock">
+                        <input type="text" class="put-1">
+                        <img src="./images/15_09.png" class="yzm" />
+                    </div>
+                </div>
+                <div class="commit">
+                    <a href="javascript:;">提交</a>
+                </div>
+                <ul class="cxlist clearfix">
+                    <li>
+                        <div class="limit clearfix">
+                            <a href="" class="limittext"> 贺辉在市方志室调研时要求 坚持“六个提高” 打响方志品牌</a>
+                            <span>2021-09-07</span>
+                        </div>
+                        <div class="cxbtn">
+                            <div>
+                                <span class="subti">申请单位:</span>
+                                <span class="desc">益阳市农业农村局</span>
+                            </div>
+                            <div>
+                                <span class="subti">处理状态:</span>
+                                <span class="desc status">申请通过</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="limit clearfix">
+                            <a href="" class="limittext"> 贺辉在市方志室调研时要求 坚持“六个提高”</a>
+                            <span>2021-09-07</span>
+                        </div>
+                        <div class="cxbtn">
+                            <div>
+                                <span class="subti">申请单位:</span>
+                                <span class="desc">益阳市农业农村局</span>
+                            </div>
+                            <div>
+                                <span class="subti">处理状态:</span>
+                                <span class="desc status">申请通过</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="limit">
+                            <a href="" class="limittext"> 贺辉在市方志室调研时要求 坚持“六个提高” 打响方志品牌</a>
+                            <span>2021-09-07</span>
+                        </div>
+                        <div class="cxbtn">
+                            <div>
+                                <span class="subti">申请单位:</span>
+                                <span class="desc">益阳市农业农村局</span>
+                            </div>
+                            <div>
+                                <span class="subti">处理状态:</span>
+                                <span class="desc status">申请通过</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="limit">
+                            <a href="" class="limittext"> 贺辉在市方志室调研时要求 坚持“六个提高” 打响方志品牌</a>
+                            <span>2021-09-07</span>
+                        </div>
+                        <div class="cxbtn">
+                            <div>
+                                <span class="subti">申请单位:</span>
+                                <span class="desc">益阳市农业农村局</span>
+                            </div>
+                            <div>
+                                <span class="subti">处理状态:</span>
+                                <span class="desc status">申请通过</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="limit">
+                            <a href="" class="limittext"> 贺辉在市方志室调研时要求 坚持“六个提高” 打响方志品牌贺辉在市方志室调研时要求 坚持“六个提高” 打响方志品牌贺辉在市方志室调研时要求 坚持“六个提高” 打响方志品牌</a>
+                            <span>2021-09-07</span>
+                        </div>
+                        <div class="cxbtn">
+                            <div>
+                                <span class="subti">申请单位:</span>
+                                <span class="desc">益阳市农业农村局</span>
+                            </div>
+                            <div>
+                                <span class="subti">处理状态:</span>
+                                <span class="desc status">申请通过</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="cxpage">
+                    <a>上一页</a>
+                    <a>下一页</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- <script src="js/flexible.js"></script> -->
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $.each($(".limit"), function(i, val) {
+            var obj = $(val).children(".limittext");
+            var length = obj.html().split("").length;
+            console.log(length)
+            if (length > 50) {
+                obj.html(obj.html().substring(0, 51) + "...")
+            }
+        });
+    </script>
+</body>
+
+</html>

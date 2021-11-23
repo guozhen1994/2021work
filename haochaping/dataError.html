@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>暂无数据</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!--返回-->
+    <!-- <div class="top">
+        <i class="return"></i>暂无数据
+    </div> -->
+    <div class="pingjiabody">
+        <div class="dataerror">
+            <img src="./img/dataerror.png" class="dataerrorImg" />
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    // 返回上一个页面
+    $('.return').click(function() {
+        window.history.go(-1);
+    });
+    // 返回首页
+    $('#returnHome').click(function() {
+        window.location.href = "index.html";
+    });
+    // 查看我的评价
+    $('#lookMine').click(function() {
+        window.location.href = "myEvaluation.html";
+    });
+</script>

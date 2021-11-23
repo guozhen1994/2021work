@@ -1,0 +1,680 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    font-family: "微软雅黑";
+    box-sizing: border-box;
+    font-style: normal;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #353B50;
+    background: #F6F7F6;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-size: 0.32rem;
+    color: #9FA2AC;
+}
+
+
+/*顶部标题 返回*/
+
+.top {
+    position: relative;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    height: 1rem;
+    line-height: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: .36rem;
+    font-weight: 500;
+    color: #353B50;
+    box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+}
+
+.top i {
+    background: url(../img/icon-back.png) center left no-repeat;
+    position: absolute;
+    top: 0;
+    left: .2rem;
+    height: 100%;
+    display: inline-block;
+    background-size: .18rem .32rem;
+    width: .5rem;
+    height: 100%;
+}
+
+.pingjiabody {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    overflow-y: auto;
+    background-color: #f8f8f8;
+}
+
+
+/*服务评价*/
+
+.fwpj {
+    width: 100%;
+    height: 2.56rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    padding: .6rem;
+    margin-bottom: .2rem;
+}
+
+.fwpj span {
+    font-size: .32rem;
+    color: #9FA2AC;
+}
+
+.star {
+    width: 100%;
+    text-align: center;
+}
+
+.star span {
+    display: inline-block;
+    width: 0.5rem;
+    height: .5rem;
+    margin-left: .3rem;
+    background: url(../img/star-active.png) center center no-repeat;
+    opacity: .3;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.star span.on {
+    opacity: 1;
+}
+
+
+/*具体说说看*/
+
+.form-box {
+    width: 100%;
+    background: #FFFFFF;
+    font-size: .3rem;
+    margin-bottom: .2rem;
+}
+
+.form-box .title {
+    font-weight: 400;
+    color: #9FA2AC;
+    font-size: .32rem;
+    padding: .32rem;
+}
+
+
+/*选择标签*/
+
+.tags {
+    width: 100%;
+    padding-top: .02rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(241, 241, 241, 1);
+}
+
+.tags ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 .25rem;
+}
+
+.tags ul li {
+    flex-shrink: 0;
+    padding: 0 .25rem;
+    padding: 0.15rem;
+    line-height: 0.48rem;
+    padding-left: 0.32rem;
+    font-size: .28rem;
+    color: #353B50;
+    border: 1px solid #DCDCDC;
+    background: #fff;
+    border-radius: .1rem;
+    margin-bottom: .2rem;
+    cursor: pointer;
+}
+
+.tags ul li:last-child {
+    margin-bottom: 0;
+}
+
+.tags ul li.on {
+    background: #FAEFE9;
+    color: #F18551;
+    border: 1px solid #F18551;
+}
+
+
+/*备注*/
+
+.remark {
+    width: 100%;
+}
+
+.remark textarea {
+    width: 100%;
+    font-size: 0.32rem;
+    height: 4.7rem;
+    resize: none;
+    outline: none;
+    color: #353B50;
+    line-height: .48rem;
+    padding: .4rem;
+}
+
+
+/* 匿名提交 */
+
+.secret {
+    margin-bottom: 0.2rem;
+    height: 1.2rem;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    font-size: 0.32rem;
+    padding: .38rem .25rem;
+}
+
+.radio-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-desc label {
+    line-height: 0.38rem;
+    display: inline-block;
+    margin-left: 0.15rem;
+    margin-right: 0.28rem;
+    color: #353B50;
+}
+
+.radio_type {
+    background: none;
+    -webkit-appearance: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    appearance: none;
+    position: relative;
+}
+
+.radio_type:before {
+    content: '';
+    width: 0.36rem;
+    height: 0.36rem;
+    border: 1px solid #979797;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.radio_type:checked:before {
+    content: '';
+    width: 0.36rem;
+    height: 0.36rem;
+    border: 1px solid #54be49;
+    background: url(../img/checked.png) center center no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.radio_type:checked {
+    color: #54be49;
+}
+
+.sec-desc {
+    font-size: 0.28rem;
+    color: #9A9DA7;
+}
+
+
+/*提交*/
+
+.submit {
+    width: 100%;
+    padding: .14rem .5rem;
+    background: #fff;
+}
+
+.submit button {
+    width: 100%;
+    height: 1rem;
+    border-radius: .9rem;
+    font-size: .32rem;
+    color: #ffffff;
+    letter-spacing: .02rem;
+    box-shadow: 0 0 .15rem rgba(0, 0, 0, .2);
+    background: linear-gradient(270deg, #F19058 0%, #F25432 100%);
+}
+
+
+/* 提交成功 */
+
+.commitCont {
+    background: #fff;
+    margin: 0 auto;
+    padding-top: 1.66rem;
+    height: 100%;
+    text-align: center;
+}
+
+.commitContImg {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.48rem;
+}
+
+.commitContDesc {
+    height: 0.6rem;
+    font-size: 0.4rem;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #353B50;
+    line-height: 0.6rem;
+    margin-bottom: 0.18rem;
+    padding: 0 0.25rem;
+}
+
+.commitContsub {
+    height: 0.44rem;
+    padding: 0 0.25rem;
+    font-size: 0.32rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #9FA2AC;
+    line-height: 0.44rem;
+}
+
+.commitArray {
+    position: absolute;
+    bottom: 0.49rem;
+    width: 100%;
+    padding: .22rem .5rem;
+    padding-bottom: 0;
+}
+
+.commitArray button {
+    width: 100%;
+    height: 1rem;
+    border-radius: 0.56rem;
+    font-size: .32rem;
+    letter-spacing: .02rem;
+    margin-bottom: 0.22rem;
+}
+
+.lookMine {
+    box-shadow: 0px 0px 0.16rem 0px rgba(0, 0, 0, 0.08);
+    border: 1px solid #DFDFDF;
+    background: none;
+    color: #3F4558;
+}
+
+.returnHome {
+    color: #fff;
+    background: linear-gradient(270deg, #F19058 0%, #F25432 100%);
+}
+
+
+/* 我的评价 */
+
+.search-bar {
+    position: relative;
+    padding: 0.36rem 0.32rem;
+    display: flex;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.search-bar_form {
+    height: 0.96rem;
+    line-height: 0.96rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0.08rem 0.16rem 0px rgba(0, 0, 0, 0.08), 0px 0px 1px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 0.6rem;
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    flex: auto;
+}
+
+.search-bar_form img {
+    position: absolute;
+    width: 0.48rem;
+    height: 0.48rem;
+    left: 0.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    padding-left: 0.8rem;
+    padding-right: 0.2rem;
+    font-size: 0.36rem;
+}
+
+.cancel-btn {
+    color: #353B50;
+    font-size: 0.32rem;
+    display: none;
+}
+
+.bar_focusing .search-bar_form {
+    margin-right: 0.1rem;
+}
+
+.bar_focusing .cancel-btn {
+    display: inline-block;
+}
+
+
+/* 评价列表 */
+
+.evalList {
+    padding: 0.32rem;
+    padding-bottom: 0;
+    background: #fff;
+    margin-bottom: 0.2rem;
+}
+
+.evalList:last-child {
+    margin-bottom: 0;
+}
+
+.eval_top {
+    border-bottom: 1px solid rgba(241, 241, 241, 1);
+}
+
+.title_one {
+    font-size: 0.32rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #353B50;
+    line-height: 0.48rem;
+    margin-bottom: 0.2rem;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.title_desc {
+    font-size: 0.28rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #9FA2AC;
+    line-height: 0.4rem;
+    margin-bottom: 0.2rem;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.eval_center {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(241, 241, 241, 1);
+}
+
+.evaldesc-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.evalstar {
+    display: flex;
+    margin: 0.1rem 0;
+}
+
+.evalstar span {
+    width: 0.34rem;
+    height: .34rem;
+    margin-right: .15rem;
+    background: url(../img/star-active.png) center center no-repeat;
+    opacity: .3;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.evalstar span.on {
+    opacity: 1;
+}
+
+.evalstatus {
+    font-size: 0.28rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #3676F5;
+    line-height: 0.34rem;
+}
+
+.evaldesc-two {
+    font-size: 0.28rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #9FA2AC;
+    line-height: 0.4rem;
+    margin-bottom: 0.2rem;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.evaldesc-three {
+    font-size: 0.32rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #353B50;
+    line-height: 0.48rem;
+    margin-bottom: 0.2rem;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.evaldesc-four {
+    font-size: 0.28rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #9FA2AC;
+    line-height: 0.4rem;
+}
+
+.eval_bottom {
+    text-align: right;
+}
+
+.eval_bottom button {
+    width: 1.4rem;
+    height: 0.56rem;
+    font-size: 0.26rem;
+    border-radius: 0.32rem;
+    color: #F18551;
+    border: 1px solid #F18551;
+    background: none;
+    margin: 0.4rem 0;
+}
+
+
+/* 评价详情 */
+
+.evaldesc_top {
+    background: #fff;
+    padding: 0.4rem 0.32rem;
+    margin-bottom: 0.2rem;
+}
+
+.title_location {
+    color: #9FA2AC;
+    font-size: 0.28rem;
+}
+
+.title_location img {
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-right: 0.2rem;
+}
+
+.desccont {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; */
+    background: #FFFFFF;
+}
+
+.attitude {
+    width: 100%;
+    text-align: center;
+    padding: 0.4rem 0;
+    font-size: 0.32rem;
+}
+
+.desccont .tags {
+    margin-top: 0.46rem;
+}
+
+.descword {
+    padding: 0.38rem 0.32rem;
+    font-size: 0.32rem;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #353B50;
+    line-height: 0.48rem;
+}
+
+.username {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 0.28rem;
+    color: #9FA2AC;
+    line-height: 0.48rem;
+    padding: 0 0.32rem;
+    padding-bottom: 1rem;
+}
+
+
+/* 暂无数据 */
+
+.dataerror {
+    background: #fff;
+    margin: 0 auto;
+    padding-top: 3.64rem;
+    height: 100%;
+    text-align: center;
+}
+
+.dataerrorImg {
+    width: 4.5rem;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .47;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+#animationTipBox {
+    font-size: 0.32rem;
+    width: 6.3rem;
+    height: 4.06rem;
+    background-color: #fff;
+    border-radius: 8px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -3.13rem;
+    margin-top: -2.03rem;
+    z-index: 1001;
+    text-align: center;
+    color: #393F53;
+    line-height: 0.52rem;
+    -webkit-animation: alertAnimation .3s ease-in-out 0 1;
+    -moz-animation: alertAnimation .3s ease-in-out 0 1;
+    animation: alertAnimation .3s ease-in-out 0 1;
+}
+
+.close {
+    position: absolute;
+    right: 0.34rem;
+    top: 0.34rem;
+    width: 0.32rem;
+    height: 0.32rem;
+}
+
+.errorContImg {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.64rem;
+    margin-bottom: 0.38rem;
+}
+
+.dec_txt {
+    margin: 0 1.2rem;
+    font-size: 0.32rem;
+    font-weight: 400;
+    color: #9FA2AC;
+    line-height: 0.52rem;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="gb2312">
+		<meta http-equiv="content-language" content="zh-CN" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/owl.carousel.css" />
+
+	</head>
+	<body class="zx_bg">
+		<!--身体-->
+		<div class="ybs-content bg1" style="padding: .3rem;">
+			<div class="lead-pho">
+				<img src="http://www.yiyang.gov.cn/yiyang/uploadfiles/201911/20191113172342643.jpg" alt="">
+				<h2>瞿 海</h2>
+				<p>市委书记</p>
+			</div>
+			<div id="new1">
+				<div class="lead-tab hd">
+					<ul>
+						<li class="on"><a href="#">个人简历</a></li>
+						<li><a href="#">领导分工</a></li>
+						<li><a href="#">领导活动</a></li>       
+					</ul> 
+				</div>
+				<div class="lead-tab-con bd" id="tabBox1-bd">
+					<div class="bd-con">
+						<div class="lead-about">
+							<p style="margin-top: 0px; margin-bottom: 0px; text-indent: 2em; line-height: 2.2;">瞿海，男，苗族，湖南沅陵人，1966年1月出生，1984年7月参加工作，1986年1月加入中国共产党，中央党校研究生学历。现任益阳市委书记、市人大常委会主任。</p>
+							<p style="margin-top: 0px; margin-bottom: 0px; text-indent: 2em; line-height: 2.2;">1984年7月从湖南省供销学校毕业后到湖南省供销社工作;</p>
+							<p style="margin-top: 0px; margin-bottom: 0px; text-indent: 2em; line-height: 2.2;">1989年6月任人事处副科级干事；</p>
+						</div>
+					</div>
+					<div class="bd-con">
+						<div class="lead-works">
+							主持市委全面工作。
+						</div>
+					</div>
+					<div class="bd-con">
+						<ul class="commonList_dot">
+							<li><a href="#">益阳市人民政府关于印发《益阳市市场监管领域全面推行部门联合“双随机、一公开”监管实施方案》的通知</a><span class="date">12-02</span></li>
+							<li><a href="#">湖南省人力资源和社会保障厅湖南省财政厅印发《关于贯彻落实支持...</a><span class="date">12-02</span></li>
+							<li><a href="#">湖南省实施《国有土地上房屋征收与补偿条例》办法</a><span class="date">12-02</span></li>
+						</ul>
+						<div class="lfjmore"><a href="#">查看更多</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/owl.carousel.min.js" ></script>
+		<script type="text/javascript" src="js/wap_adaptive.js" ></script>
+		<script type="text/javascript" src="js/wap_TouchSlide.1.1.js"></script>
+		<script type="text/javascript">
+		//手机端rem适配
+		window['adaptive'].desinWidth = 1080;
+        window['adaptive'].init();
+		</script>
+		<script type="text/javascript">
+			TouchSlide({slideCell: "#new1",endFun:function(i){ //高度自适应
+				var bd = document.getElementById("tabBox1-bd");
+				bd.parentNode.style.height = bd.children[i].offsetHeight+63+"px";
+				if(i>0)bd.parentNode.style.transition="200ms";//添加动画效果
+				}
+			});
+		</script>
+	</body>
+</html>
+ 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的评价</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!--返回-->
+    <!-- <div class="top">
+        <i class="return"></i>我的评价
+    </div> -->
+    <div class="pingjiabody">
+        <div class="search-bar" id="searchBar">
+            <form class="search-bar_form" action="# ">
+                <img src="./img/search.png" />
+                <input class="search-input" placeholder="请输入关键词查询" />
+            </form>
+            <a href="javascript: " class="cancel-btn" id="searchCancel">取消</a>
+        </div>
+        <div class="evalList">
+            <div class="eval_top">
+                <div class="title_one">袁锦涛企业申办城市道路占用费</div>
+                <div class="title_desc">办件编号：<span>43GB24301819990000020190425</span></div>
+            </div>
+            <div class="eval_center">
+                <div class="evaldesc-one">
+                    <div class="evalstar">
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="evalstatus">预受理</div>
+                </div>
+                <div class="evaldesc-two">
+                    评价理由：<span id="reason">办事态度差效率低、办事指南提供样本有错 承诺在线收取申报材料实际无法收取</span>
+                </div>
+                <div class="evaldesc-three">办事人员态度不好，希望下次一定好好改进</div>
+                <div class="evaldesc-four">评价时间：<span id="evaltime">2021-06-07</span></div>
+            </div>
+            <div class="eval_bottom">
+                <button class="evaldesc">评论详情</button>
+            </div>
+        </div>
+        <div class="evalList">
+            <div class="eval_top">
+                <div class="title_one">社会团体办事(内设)机构详情表 名称办事(内设) 机 构名称住所邮编工作职责履行内</div>
+                <div class="title_desc">办件编号：<span>43GB24301819990000020190425</span></div>
+            </div>
+            <div class="eval_center">
+                <div class="evaldesc-one">
+                    <div class="evalstar">
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                    </div>
+                    <div class="evalstatus">预受理</div>
+                </div>
+                <div class="evaldesc-two">
+                    评价理由：<span id="reason">办事态度差效率低、办事指南提供样本有错 承诺在线收取申报材料实际无法收取</span>
+                </div>
+                <div class="evaldesc-three">办事人员态度不好，希望下次一定好好改进</div>
+                <div class="evaldesc-four">评价时间：<span id="evaltime">2021-06-07</span></div>
+            </div>
+            <div class="eval_bottom">
+                <button class="evaldesc">评论详情</button>
+            </div>
+        </div>
+        <div class="evalList">
+            <div class="eval_top">
+                <div class="title_one">袁锦涛企业申办城市道路占用费</div>
+                <div class="title_desc">办件编号：<span>43GB24301819990000020190425</span></div>
+            </div>
+            <div class="eval_center">
+                <div class="evaldesc-one">
+                    <div class="evalstar">
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="evalstatus">预受理</div>
+                </div>
+                <div class="evaldesc-two">
+                    评价理由：<span id="reason">办事态度差效率低、办事指南提供样本有错 承诺在线收取申报材料实际无法收取</span>
+                </div>
+                <div class="evaldesc-three">办事人员态度不好，希望下次一定好好改进</div>
+                <div class="evaldesc-four">评价时间：<span id="evaltime">2021-06-07</span></div>
+            </div>
+            <div class="eval_bottom">
+                <button class="evaldesc">评论详情</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    $(document).on("click touchstart", ".search-input", function(e) {
+        $(e.target).parents(".search-bar").addClass("bar_focusing").find('input').focus();
+    }).on("click", ".cancel-btn", function(e) {
+        var $input = $(e.target).parents(".search-bar").removeClass("bar_focusing").find(".search-input").val("").blur();
+    });
+    // 返回上一个页面
+    $('.return').click(function() {
+        window.history.go(-1);
+    });
+    // 跳转评论详情
+    $('.evaldesc').click(function() {
+        window.location.href = "evaluationDesc.html";
+    });
+</script>

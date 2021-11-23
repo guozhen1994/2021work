@@ -1,0 +1,438 @@
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: "microsoft yahei";
+        font: normal 12px/180% \5FAE\8F6F\96C5\9ED1;
+        color: #333;
+        text-align: center;
+        background: #fff;
+        overflow-x: hidden;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    p,
+    blockquote,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    pre,
+    form,
+    button,
+    input,
+    textarea,
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+    }
+    
+    div {
+        margin: 0 auto;
+        text-align: left;
+        font: normal 14px/180% \5FAE\8F6F\96C5\9ED1;
+    }
+    
+    a,
+    a:link,
+    a:visited {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    img {
+        border: none;
+    }
+    
+    ol,
+    ul,
+    li {
+        list-style: none;
+    }
+    
+    em {
+        font-style: normal;
+    }
+    /*clear*/
+    
+    .clearfix:before,
+    .clearfix:after {
+        content: "";
+        display: table;
+    }
+    
+    .clearfix:after {
+        clear: both;
+        overflow: hidden;
+    }
+    
+    .clearfix {
+        zoom: 1;
+    }
+    /*other*/
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: left;
+        font: normal 12px/200% Microsoft YaHei;
+    }
+    
+    .mt10 {
+        margin-top: 10px;
+    }
+    
+    .mb10 {
+        margin-bottom: 10px;
+    }
+    
+    .m10 {
+        margin: 10px auto;
+    }
+    
+    .w1200 {
+        width: 1200px;
+    }
+    
+    .fl {
+        float: left;
+    }
+    
+    .fr {
+        float: right;
+    }
+    
+    .gray,
+    .gray a:link,
+    .gray a:visited,
+    .gray a:hover {
+        color: #666;
+    }
+    
+    .container {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    img {
+        border: 0;
+        max-width: 100%;
+    }
+    /* .content {
+        width: 100%;
+        background-color: #ffffff;
+        margin: 20px auto;
+    } */
+    /* 头部开始 */
+    
+    .header {
+        width: 100%;
+        height: 345px;
+        overflow: hidden;
+        background: url(../images/fk_01.png);
+    }
+    
+    .wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .logo {
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    /* 头部结束 */
+    /* 内容开始 */
+    
+    .con_top {
+        margin-top: 40px;
+    }
+    
+    .top_left {
+        width: calc(100% - 385px);
+        float: left;
+    }
+    
+    .title {
+        width: 100%;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 48px;
+        color: #333333;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .light {
+        color: #095ba9;
+    }
+    
+    .shape {
+        margin-left: 10px;
+    }
+    
+    .shapeline {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: #095ba9;
+    }
+    
+    .yqlist {
+        margin: 20px 0;
+    }
+    
+    .yqlist li {
+        list-style: none;
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .yqlist li a {
+        text-decoration: none;
+        color: #333333;
+        float: left;
+        width: calc(100% - 100px);
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 8px;
+        text-indent: 10px;
+        position: relative;
+        font-size: 16px;
+    }
+    
+    .yqlist li a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ccc;
+    }
+    
+    .yqlist li span {
+        float: right;
+        font-size: 15px;
+        width: 90px;
+        color: #999999;
+    }
+    
+    .yqdata {
+        background: url(../images/yxyq_13.png) left center #f7f7f7 no-repeat;
+        border-top: 3px solid #176ac4;
+        height: 101px;
+        padding-left: 200px;
+        margin: 20px 0;
+    }
+    
+    .yqdata li {
+        width: 100%;
+        line-height: 48px;
+        font-size: 16px;
+    }
+    
+    .yqdata li a {
+        text-decoration: none;
+        color: #333333;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .box-cont {
+        margin-right: 30px;
+        float: left;
+        width: calc((100% - 30px)/2);
+    }
+    
+    .hottitle {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 48px;
+    }
+    
+    .box-cont:nth-child(2n) {
+        margin-right: 0;
+    }
+    
+    .gov li {
+        list-style: none;
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .gov li a {
+        text-decoration: none;
+        color: #333333;
+        float: left;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 8px;
+        text-indent: 10px;
+        position: relative;
+        font-size: 16px;
+    }
+    
+    .gov li a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ccc;
+    }
+    
+    .top_right {
+        float: left;
+        width: 355px;
+        margin-left: 30px;
+    }
+    
+    .kplist {
+        margin: 10px 0 20px;
+    }
+    
+    .kplist li {
+        list-style: none;
+        line-height: 26px;
+        font-size: 15px;
+    }
+    
+    .kplist li a {
+        text-decoration: none;
+        color: #333333;
+        font-weight: bold;
+        width: 100%;
+        display: block;
+        font-size: 15px;
+    }
+    
+    .yqfkpng {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    .fk-btn {
+        margin: 40px auto;
+    }
+    
+    .fk-btn li {
+        float: left;
+        width: calc((100% - 40px)/3);
+        height: 100px;
+        margin-right: 20px;
+        background: #f1f8ff;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    
+    .fk-btn li:hover {
+        transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+    }
+    
+    .fk-btn li:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    
+    .fkb_icon {
+        display: inline-block;
+        height: 100%;
+    }
+    
+    .smalltitle {
+        display: none;
+    }
+    /* 内容结束 */
+    /* 适配开始 */
+    
+    @media screen and (max-width:1200px) {
+        .w1200,
+        .wrap {
+            width: 98%;
+        }
+        .header {
+            height: auto;
+        }
+        .fk-btn {
+            margin: 0 auto;
+        }
+        .top_left,
+        .top_right,
+        .box-cont {
+            float: none;
+            width: 95%;
+            margin: 0 auto;
+        }
+        .yqdata {
+            background: url(../images/yxyq_13.png) left top #f7f7f7 no-repeat;
+            height: auto;
+            padding: 101px 10px 10px;
+            margin: 10px 0;
+        }
+        .smalltitle {
+            width: 100%;
+            display: block;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+        }
+        .yellow {
+            display: block;
+            color: #ffab0a;
+        }
+        .bztxbox {
+            margin-bottom: 20px;
+        }
+        .box-cont:nth-child(2n) {
+            margin-right: auto;
+        }
+        .yqdata li {
+            line-height: 30px;
+        }
+        .fk-btn li {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    /* 适配结束 */

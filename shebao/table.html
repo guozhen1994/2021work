@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div class="grid809">
+        <div class="tseb2">
+            <div class="tseb2-l">
+                <div class="tseb2-l-c">
+                    <h1 class="applicationNav">
+                        <span>基本养老保险查询</span>
+                    </h1>
+                    <div class="formBox clearFix" id="form">
+                        <!--此处为查询条件输入或业务添加-->
+                        <!-- <div class="formName">
+                            <i class="name_icon">
+								<img src="images/form-icon7.png">
+							</i>
+                            <input type="text" maxlength="30" id="userName" placeholder="请输入姓名" value="">
+                        </div>
+
+                        <div class="formName">
+                            <i class="name_icon">
+								<img src="images/form-icon3.png">
+							</i>
+                            <input type="text" maxlength="30" id="idcard" placeholder="请输入身份证号" value="">
+                        </div> -->
+
+                        <!-- <div class="formCode">
+                            <i class="code_icon">
+								<img src="images/form-icon2.png">
+							</i>
+                            <input type="text" maxlength="6" id="code" placeholder="验证码" value="">
+                            <button id="buttonCode" class="button-code">发送验证码</button>
+                        </div> -->
+                        <div class="err-tip"></div>
+                        <ul class="formButton clearFix">
+                            <li class="subMit" onclick="subMit();">立刻查询</li>
+                            <!-- <li class="subRes" onclick="resrt();">重置信息</li> -->
+                        </ul>
+                    </div>
+                    <div id="resultDiv" class="pageList">
+                        <h1 class="applicationNav">
+                            <span>查询结果</span>
+                        </h1>
+                        <div id="result"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tseb2-r">
+                <div class="tseb2-r-c">
+                    <h1 class="applicationNav">
+                        <span>其他相关服务</span>
+                    </h1>
+                    <div class="snrbg">
+                        <dl id="bg">
+                            <dd>
+                                <div class="rns"><a href="#">湖南省自学考试成绩查询</a></div>
+                            </dd>
+                            <dd>
+                                <div class="rns"><a href="#">就业报到证查询</a></div>
+                            </dd>
+                            <dd>
+                                <div class="rns"><a href="#">湖南省自学考试毕业证书查询</a></div>
+                            </dd>
+                            <dd>
+                                <div class="rns"><a href="#">研究生招生考试成绩查询</a></div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="resultDiv">
+            <h1 class="applicationNav">
+                <span>查询结果</span>
+            </h1>
+            <h2 class="gridtitle">湖南省机关事业单位工作人员基本养老保险证明
+                <img src="./images/2020f30_05.png" class="code809" />
+            </h2>
+            <div class="gridcont">兹有<input class="partname" value="国家税务总局税务干部学院（长沙）" />（单位管理码:<input class="managecode" value="2374893275975" />）的以下职工在我处参加机关事业单位工作人员基本养老保险：</div>
+            <div class="gridtable">
+                <table>
+                    <tr>
+                        <th width="9%">姓名</th>
+                        <th width="18%">证件号码</th>
+                        <th width="13%">养老保险建账时间</th>
+                        <th width="14%">累计实际缴费月数(含转入)</th>
+                        <th width="13%">本地缴费开始月份</th>
+                        <th width="13%">本地缴费最后月份</th>
+                        <th width="12%">最后缴费月基数(元)</th>
+                        <th width="8%">缴费状态</th>
+                    </tr>
+                    <tr>
+                        <td>邓魏军</td>
+                        <td>430321196502101231</td>
+                        <td>201410</td>
+                        <td>81</td>
+                        <td>201410</td>
+                        <td>202106</td>
+                        <td>3625</td>
+                        <td>正常参保</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tczm809">特此证明:</div>
+            <div class="zmdesc809 clearfix">
+                <span>经办人：自助机打印</span>
+                <span>2021年08月03日</span>
+            </div>
+            <div class="desctitle809">说明</div>
+            <ul class="desc809">
+                <li>1.机关事业单位工作人员养老保险制度自2014年10月1日起实施。</li>
+                <li>2.自2019年1月1日起，社会保险费由税务部门征收，如对该期间缴费数据有异议，可向税务部门咨询：12366。</li>
+            </ul>
+            <div class="printblock">
+                <a href="#" class="print">打印证明</a>
+            </div>
+        </div>
+
+</body>
+
+</html>

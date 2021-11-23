@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>服务评价</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!--返回-->
+    <!-- <div class="top">
+        <i class="return"></i>我要评价
+    </div> -->
+    <div class="pingjiabody">
+        <!--我要评价-->
+        <div class="fwpj">
+            <span>请选择整体满意度</span>
+            <div class="star">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="form-box">
+            <!--选择标签-->
+            <div class="xzbq">
+                <p class="title">请选择一条或多条评价理由</p>
+                <div class="tags">
+                    <ul>
+                        <li>办事指南非常详细准确，对事项申报很有帮助</li>
+                        <li>接受咨询非常详细准确，一次性完整告知要提交的 申报材料相关信息</li>
+                        <li>可以在线提交申报材料</li>
+                        <li>能够实现全程在线办理</li>
+                        <li>不要求提交由政府部门出具各种证明材料</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="remark">
+                <textarea name="content" placeholder="请输入你的评价描述..."></textarea>
+            </div>
+
+        </div>
+        <div class="secret">
+            <div class="radio-desc">
+                <input class="radio_type" type="radio" name="noname" id="noname" />
+                <label for="noname">匿名评价</label>
+            </div>
+            <div class="sec-desc">您的评价会以匿名形式展示</div>
+        </div>
+        <div class="submit">
+            <button id="submit">提交</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    // 评价打分
+    $('.star span').click(function() {
+        $(this).parent().find('span').removeClass('on')
+        var index = $(this).index();
+        $(this).parent().find('span').each(function() {
+            if (index < 0) {
+                return
+            }
+            $(this).addClass('on');
+            index--
+        })
+    });
+    $('.radio_type').click(function() {
+        var $radio = $(this);
+        if ($radio.data('waschecked') == true) {
+            $radio.prop('checked', false);
+            $radio.data('waschecked', false);
+        } else {
+            $radio.prop('checked', true);
+            $radio.data('waschecked', true);
+        }
+    });
+    // 返回上一个页面
+    $('.return').click(function() {
+        window.history.go(-1);
+    });
+    // 标签选择
+    $('.tags ul li').click(function() {
+        $(this).toggleClass('on');
+    });
+    // 提交
+    $('#submit').click(function() {
+        window.location.href = "commitSus.html";
+    });
+</script>

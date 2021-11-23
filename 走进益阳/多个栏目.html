@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栏目列表</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/wap_adaptive.js"></script>
+    <script>
+        window['adaptive'].desinWidth = 1080;
+        window['adaptive'].init();
+    </script>
+
+</head>
+
+<body>
+    <div class="menuMain">
+        <ul id="menuUl" class="menuUl">
+            <li class="listitem hasChild">
+                <p class="listitemp">政府信息公开指南</p>
+                <ol class="listchildcon">
+                    <li>机关简介</li>
+                    <li>规划计划</li>
+                    <li>统计信息</li>
+                    <li>行政许可</li>
+                    <li>处罚/强制</li>
+                    <li>预算/决算</li>
+                    <li>收费项目</li>
+                    <li>政府采购</li>
+                    <li>重大建设项目</li>
+                </ol>
+            </li>
+            <li class="listitem">
+                <p class="listitemp">政府信息公开制度</p>
+                <ol class="listchildcon">
+                </ol>
+            </li>
+            <li class="listitem hasChild">
+                <p class="listitemp">法定主动公开内容</p>
+                <ol class="listchildcon">
+                    <li>机关简介</li>
+                    <li>规划计划</li>
+                    <li>统计信息</li>
+                    <li>行政许可</li>
+                    <li>处罚/强制</li>
+                    <li>预算/决算</li>
+                    <li>收费项目</li>
+                    <li>政府采购</li>
+                    <li>重大建设项目</li>
+                </ol>
+            </li>
+            <li class="listitem hasChild">
+                <p class="listitemp">政府信息公开年报</p>
+                <ol class="listchildcon">
+                    <li>机关简介</li>
+                    <li>规划计划</li>
+                    <li>统计信息</li>
+                    <li>行政许可</li>
+                    <li>处罚/强制</li>
+                    <li>预算/决算</li>
+                    <li>收费项目</li>
+                    <li>政府采购</li>
+                    <li>重大建设项目</li>
+                </ol>
+            </li>
+            <li class="listitem hasChild">
+                <p class="listitemp">依申请公开</p>
+                <ol class="listchildcon">
+                    <li>机关简介</li>
+                    <li>规划计划</li>
+                    <li>统计信息</li>
+                    <li>行政许可</li>
+                    <li>处罚/强制</li>
+                    <li>预算/决算</li>
+                    <li>收费项目</li>
+                    <li>政府采购</li>
+                    <li>重大建设项目</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(".listitemp").click(function() {
+            if ($(this).parent().hasClass("hasChild")) {
+                if ($(this).parent().hasClass("active")) {
+                    $(this).parent().removeClass("active").end().next().slideUp().end().parent().siblings().removeClass("active")
+                        .children("ol").hide();
+                } else {
+                    $(this).parent().addClass("active").end().next().slideDown().end().parent().siblings().removeClass("active")
+                        .children("ol").hide();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

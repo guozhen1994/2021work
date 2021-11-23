@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "microsoft yahei";
+            color: #333;
+            font-size: 16px;
+        }
+        
+        ul,
+        li,
+        dl,
+        dt,
+        dd {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        img {
+            border: none;
+            max-width: 100%;
+        }
+        
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        i,
+        em,
+        b {
+            font-weight: normal;
+            font-style: normal;
+            font-size: 100%;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        input,
+        select,
+        textarea,
+        button {
+            outline: none;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-family: "microsoft yahei";
+            font-size: 16px;
+        }
+        
+        .fl {
+            float: left;
+        }
+        
+        .fr {
+            float: right;
+        }
+        
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: " ";
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        /* 以下是新增的 */
+        
+        .grid809 {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gridtitle {
+            text-align: center;
+            font-size: 24px;
+            padding: 10px;
+            font-weight: 500;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .code809 {
+            position: absolute;
+            right: 0;
+            top: -20px;
+            width: 80px;
+            height: 80px;
+        }
+        
+        .gridcont {
+            text-indent: 2em;
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .partname {
+            border: 0;
+            margin: 0 10px;
+            width: 500px;
+            border-bottom: 1px solid #333;
+            text-align: center;
+        }
+        
+        .managecode {
+            border: 0;
+            margin: 0 10px;
+            width: 300px;
+            border-bottom: 1px solid #333;
+            text-align: center;
+        }
+        
+        .gridtable {
+            text-align: center;
+        }
+        
+        .gridtable table,
+        .gridtable table tr th,
+        .gridtable table tr td {
+            padding: 5px 10px;
+            border: 1px solid #999;
+        }
+        
+        .tczm809 {
+            text-indent: 1em;
+            padding: 10px 0;
+        }
+        
+        .zmdesc809 {
+            width: 80%;
+            padding: 10px 0;
+        }
+        
+        .zmdesc809 span:nth-child(1) {
+            float: left;
+        }
+        
+        .zmdesc809 span:nth-child(1) {
+            float: right;
+        }
+        
+        .desctitle809 {
+            padding: 5px 0;
+        }
+        
+        .desc809 li {
+            display: block;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid809">
+
+        <h2 class="gridtitle">湖南省机关事业单位工作人员基本养老保险证明
+            <img src="./img/dataerror.png" class="code809" />
+        </h2>
+        <div class="gridcont">兹有<input class="partname" />（单位管理码:<input class="managecode" />）的以下职工在我处参加机关事业单位工作人员基本养老保险：</div>
+        <div class="gridtable">
+            <table>
+                <tr>
+                    <th width="9%">姓名</th>
+                    <th width="18%">证件号码</th>
+                    <th width="13%">养老保险建账时间</th>
+                    <th width="14%">累计实际缴费月数(含转入)</th>
+                    <th width="13%">本地缴费开始月份</th>
+                    <th width="13%">本地缴费最后月份</th>
+                    <th width="12%">最后缴费月基数(元)</th>
+                    <th width="8%">缴费状态</th>
+                </tr>
+                <tr>
+                    <td>邓魏军</td>
+                    <td>430321196502101231</td>
+                    <td>201410</td>
+                    <td>81</td>
+                    <td>201410</td>
+                    <td>202106</td>
+                    <td>3625</td>
+                    <td>正常参保</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tczm809">特此证明:</div>
+        <div class="zmdesc809 clearfix">
+            <span>经办人：自助机打印</span>
+            <span>2021年08月03日</span>
+        </div>
+        <div class="desctitle809">说明</div>
+        <ul class="desc809">
+            <li>1.机关事业单位工作人员养老保险制度自2014年10月1日起实施。</li>
+            <li>2.自2019年1月1日起，社会保险费由税务部门征收，如对该期间缴费数据有异议，可向税务部门咨询：12366。</li>
+        </ul>
+        </ul>
+</body>
+
+</html>

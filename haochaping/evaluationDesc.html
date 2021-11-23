@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>评价详情</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!--返回-->
+    <!-- <div class="top">
+        <i class="return"></i>评价详情
+    </div> -->
+    <div class="pingjiabody">
+        <div class="evaldesc_top">
+            <div class="title_one">社会团体办事(内设)机构详情表 名称办事(内设) 机 构名称住所邮编工作职责履行内</div>
+            <div class="title_desc">办件编号：<span>43GB24301819990000020190425</span></div>
+            <div class="title_location"><img src="./img/loc.png" /><span>湖南省人力资源和社会保障局</span></div>
+        </div>
+        <div class="desccont">
+            <div class="attitude">满意</div>
+            <div class="star">
+                <span class="on"></span>
+                <span class="on"></span>
+                <span class="on"></span>
+                <span class="on"></span>
+                <span></span>
+            </div>
+            <div class="tags">
+                <ul>
+                    <li>办事指南非常详细准确，对事项申报很有帮助</li>
+                    <li>接受咨询非常详细准确，一次性完整告知要提交的 申报材料相关信息</li>
+                </ul>
+            </div>
+            <div class="descword">
+                客观性、公平性评价原则 在评价过程中,学生作为评价的主体,通过完成教师布置的学习任务外,能够通过自学任务反馈、网络课程平台在线测试等检验自己的学习效果。 在评价过程中,教师作为评价的辅助体,要求做到以客观公正...
+            </div>
+            <div class="username">匿名用户 2021-07-01</div>
+        </div>
+        <div class="mask"></div>
+        <div id="animationTipBox">
+            <img src="./img/close.png" class="close">
+            <img src="./img/error.png" class="errorContImg">
+            <div class="dec_txt">请至少选择一条评测内容， 或者输入您的评价内容！</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    // 返回上一个页面
+    $('.return').click(function() {
+        window.history.go(-1);
+    });
+    $('.close').click(function() {
+        $('.mask').hide(200);
+        $('#animationTipBox').hide(200);
+    });
+</script>
