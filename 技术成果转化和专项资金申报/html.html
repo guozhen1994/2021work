@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术成果转化</title>
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="jstab clearfix">
+            <span class="tabname">技术成果转化</span>
+            <span class="tabname" style="display: none;">专项资金申报</span>
+        </div>
+        <form id="form1" class="formCon" method="post">
+            <div class="shqb-cc">
+                <div class="xt-intro">专项资金申报</div>
+                <ul class="clearfix">
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>项目名称
+                        </div>
+                        <div class="select-memu singleCheck hasClick">
+                            <input type="text" class="select-memu-input" name="pro_name" value="" />
+                            <ul class="memu-list">
+                                <li class="memu-item">顶顶顶</li>
+                                <li class="memu-item">顶顶顶</li>
+                                <li class="memu-item">顶顶顶</li>
+                                <li class="memu-item">顶顶顶</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="liitem unclick clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>企业名称
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="qy_name">
+                        </div>
+                    </li>
+                    <li class="liitem unclick clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>企业机构代码
+                        </div>
+                        <div class="sqrli-r sqrli-r22">
+                            <input type="text" class="ip1" name="qy_code">
+                        </div>
+                    </li>
+                    <li class="liitem unclick clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>项目分类
+                        </div>
+                        <div class="select-memu hasClick">
+                            <input type="text" class="select-memu-input" name="pro_fl" value="" />
+                            <ul class="memu-list">
+                                <li class="memu-item">新能源1</li>
+                                <li class="memu-item">新能源2</li>
+                                <li class="memu-item">新能源3</li>
+                                <li class="memu-item">新能源4</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="liitem unclick clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>项目年份
+                        </div>
+                        <div class="select-memu hasClick">
+                            <input type="text" class="select-memu-input" name="qy_nf" value="" />
+                            <ul class="memu-list">
+                                <li class="memu-item">2020</li>
+                                <li class="memu-item">2021</li>
+                                <li class="memu-item">2022</li>
+                                <li class="memu-item">2023</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>申请日期
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="date" class="ip1 datesty" name="qy_date">
+                        </div>
+                    </li>
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>政策支持条例
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="pro_zctl">
+                        </div>
+                    </li>
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>批复材料
+                        </div>
+                        <div class="sqrli-r material">
+                            <input type="text" id="file_name" placeholder="选择附件" readonly="readonly" value="" />
+                            <a href="javascript:void(0);" class="input">
+                                上传文件
+                                <input type="file" class="file" id="file" name="pro_material"
+                                    onchange="handleFile('file','fileSub')" multiple="multiple">
+                            </a>
+                            <ul class='fileSub'>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="array_btn">
+                    <a href="javascript:;" class="btn commit">提交</a>
+                    <a href="javascript:;" class="btn">返回</a>
+                </div>
+            </div>
+        </form>
+        <form id="form2" class="formCon" method="post" style="display: none;">
+            <div class="shqb-cc">
+                <div class="xt-intro">技术成果转化</div>
+                <ul class="clearfix">
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>企业名称
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="jscgqy_name">
+                        </div>
+                    </li>
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>企业机构代码
+                        </div>
+                        <div class="sqrli-r sqrli-r22">
+                            <input type="text" class="ip1" name="jscgqy_code">
+                        </div>
+                    </li>
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>项目名称
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="jscgpro_name">
+                        </div>
+                    </li>
+                    <li class="liitem  clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>项目分类
+                        </div>
+                        <div class="select-memu multCheck hasClick">
+                            <input type="text" class="select-memu-input" placeholder="---请选择---" name="jscg_fl"
+                                value="" />
+                            <div class="inputWrap">
+                                <ul></ul><i class="fa fa-angle-down"></i>
+                            </div>
+                            <ul class="memu-list" id="proClassify">
+                                <!-- <li class="memu-item" data-value="0">新能源1</li>
+                                <li class="memu-item" data-value="1">新能源2</li>
+                                <li class="memu-item" data-value="2">新能源3</li>
+                                <li class="memu-item" data-value="3">新能源4</li> -->
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>项目年份
+                        </div>
+                        <div class="select-memu singleCheck hasClick">
+                            <input type="text" class="select-memu-input" placeholder="---请选择---" name="jscg_nf"
+                                value="" />
+                            <ul class="memu-list">
+                                <li class="memu-item">2020</li>
+                                <li class="memu-item">2021</li>
+                                <li class="memu-item">2022</li>
+                                <li class="memu-item">2023</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="liitem clearfix cgdesc">
+                        <div class="sqrli-l">
+                            <span>*</span>成果描述
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="jscg_desc">
+                        </div>
+                    </li>
+                    <li class="liitem clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>成果资料
+                        </div>
+                        <div class="sqrli-r material">
+                            <input type="text" id="file_name" placeholder="选择附件" readonly="readonly" value="" />
+                            <a href="javascript:void(0);" class="input">
+                                上传文件
+                                <input type="file" class="file" id="file1" name="jscg_material" name=""
+                                    onchange="handleFile('file1','fileSub')" multiple="multiple">
+                            </a>
+                            <ul class='fileSub'>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="array_btn">
+                    <a href="javascript:;" class="btn commit">提交</a>
+                    <a href="javascript:;" class="btn">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script>
+    /**
+     * fs: 上传的文件（$("#file")[0].files）
+     * max_size: 文件大小的最大值（1024 * 1024 * 100为100M）
+     * 需要传入上传文件的input的id和回显上传文件名唯一的class
+     */
+    function handleFile(inputId, subClass) {
+        let formData = new FormData();
+        fs = $("#" + inputId)[0].files;
+        let max_size = 1024 * 1024 * 100;
+
+        //展示上传的文件名字
+        var obj = document.getElementById(inputId);
+        var length = obj.files.length;
+        //当有文件上传时显示文件名
+        if (length == 0) {
+            $("#" + inputId).parents(".material").find("." + subClass).html(`<li></li>`);
+        } else {
+            $("#" + inputId).parents(".material").find("." + subClass).html(" ");
+        }
+        let _html = '';
+        for (var i = 0; i < length; i++) {
+            var temp = obj.files[i].name;
+            _html += `<li>${temp}<em></em></li>`;
+        }
+        $("#" + inputId).parents(".material").find("." + subClass).append(_html);
+
+        for (let i = 0; i < fs.length; i++) {
+            let d = fs[0];
+            if (d.size <= max_size) { //文件必须小于100M
+                if (/(PDF|pdf|DOC|doc|DOCX|docx|PNG|png|JPG|jpg|SVG|svg|TXT|txt|PPT|ppt)$/.test(d.name)) { //文件类型可自定义
+                    formData.append("files", fs[i]); //文件上传处理
+                } else {
+                    return false
+                }
+            } else {
+                return false
+            }
+        }
+        if (length != 0) {
+            $.ajax({
+                type: "POST",
+                url: "127.0.0.1",
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false
+            }).then(res => {});
+        }
+    }
+    $(document).on('click', '.fileSub li em', function () {
+        $(this).parent('li').remove();
+    })
+    $(function () {
+        $(".unclick").each(function () {
+            $(this).find("input").attr("disabled", true)
+            $(this).find(".select-memu").removeClass("hasClick")
+        });
+        $(".tabname").click(function () {
+            var index = $(this).index() == 0 ? 1 : 0;
+            $(this).hide().siblings().show();
+            $(".formCon").hide();
+            $(".formCon").eq(index).show();
+        })
+    });
+
+    jQuery.fn.isChildAndSelfOf = function (b) {
+        return (this.closest(b).length > 0);
+    };
+    $(document).click(function (event) {
+        if (!$(event.target).isChildAndSelfOf('.hasClick')) {
+            if ($('.hasClick').hasClass('active')) {
+                $('.hasClick').removeClass('active');
+            }
+        }
+    });
+    $(document).on('click', '.hasClick', function () {
+        $(this).toggleClass('active');
+    })
+    $(".singleCheck").on("click", ".memu-list li", function (event) {
+        $(this).addClass("on").siblings().removeClass("on");
+        $(this).parents(".hasClick").find(".select-memu-input").val($(this).html());
+    });
+    let option = [ //选项数据
+        {
+            label: "选项0",
+            value: 0
+        },
+        {
+            label: "选项1",
+            value: 1
+        },
+        {
+            label: "选项2",
+            value: 2
+        },
+        {
+            label: "选项3",
+            value: 3
+        },
+        {
+            label: "选项4",
+            value: 4
+        },
+        {
+            label: "选项5",
+            value: 5
+        }
+    ];
+    let lihtml = ""
+    option.forEach(function (ele) {
+        lihtml += "<li class='memu-item' data-value='" + ele.value + "'>" + ele.label + "</li>";
+    });
+    $("#proClassify").html(lihtml)
+    let result = [];
+    $(".multCheck").on("click", ".memu-list li", function (event) {
+        event.stopPropagation();
+        if ($(this).hasClass("on")) {
+            $(this).removeClass("on");
+            result.splice(result.findIndex(item => item == $(this).attr("data-value")), 1)
+        } else {
+            $(this).addClass("on");
+            result.push($(this).attr("data-value"));
+        }
+        refreshInput()
+    });
+
+    function refreshInput() {
+        $(".multCheck").find(".inputWrap ul").empty();
+        let inputhtml = ""
+        console.log(result)
+        for (var i = 0; i < option.length; i++) {
+            for (var j = 0; j < result.length; j++) {
+                if (result[j] == option[i].value) {
+                    $(".multCheck").find(".inputWrap ul").append(
+                        '<li><span class="close" data-v="' + option[i].value + '">' + option[i].label +
+                        '</span></li>');
+                    inputhtml += option[i].label + ",";
+                }
+            }
+        }
+        $(".multCheck").find(".select-memu-input").val(inputhtml);
+    }
+    $(".multCheck").on("click", ".close", function (event) {
+        // debugger
+        console.log(result)
+        let v = $(this).data("v");
+        event.stopPropagation();
+        result.splice(result.findIndex(item => item == v), 1)
+        refreshInput();
+        $(".multCheck").find(".memu-list li").each(function () {
+            if ($(this).attr("data-value") == v) {
+                $(this).removeClass("on");
+            }
+        })
+
+    });
+
+    function setLength(obj, maxlength, id) {
+        var num = obj.value.length;
+        var leng = id; //获取右下角显示的id
+        if (num < 0) {
+            num = 0; //如果文本框文字小于零则让它显示为零
+        }
+        document.getElementById(leng).innerHTML = num + "/" + maxlength;
+        //通过id获取到span标签在页面上的显示并对它的值进行拼接,就是把计算出来的结果+最大限制字数
+    }
+
+    $(function () {
+        $("#form1").validate({
+            debug: false, //false表示验证通过后不要自动提交表单
+            onkeyup: false, //表示关闭按键松开时候监听验证
+            rules: { //验证规则
+                pro_name: {
+                    required: true, //必填字段
+                },
+                qy_name: {
+                    required: true, //必填字段
+                },
+                pro_date: {
+                    required: true
+                },
+                pro_zctl: {
+                    required: true, //必填字段
+                },
+                pro_material: {
+                    required: true, //必填字段
+                }
+
+            },
+            messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+                pro_name: {
+                    required: "请填写项目名称",
+                },
+                qy_name: {
+                    required: "请填写您的真实姓名",
+                },
+                pro_date: {
+                    required: "请选择项目的申请日期",
+                },
+                pro_zctl: {
+                    required: "请选择支持条例",
+                },
+                pro_material: {
+                    required: "支持拓展名：.rar .zip .doc .docx .pdf .jpg...",
+                }
+            },
+            onfocusout: function (element) {
+                $(element).valid();
+            },
+
+        });
+        $("#form2").validate({
+            debug: false, //false表示验证通过后不要自动提交表单
+            onkeyup: false, //表示关闭按键松开时候监听验证
+            rules: { //验证规则
+                jscgqy_name: {
+                    required: true, //必填字段
+                },
+                jscgqy_code: {
+                    required: true, //必填字段
+                },
+                jscgpro_name: {
+                    required: true
+                },
+                jscg_fl: {
+                    required: true, //必填字段
+                },
+                jscg_nf: {
+                    required: true, //必填字段
+                },
+                jscg_desc: {
+                    required: true, //必填字段
+                },
+                jscg_material: {
+                    required: true, //必填字段
+                }
+            },
+            messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+                jscgqy_name: {
+                    required: "请输入您备案的企业名称",
+                },
+                jscgqy_code: {
+                    required: "请输入您备案的企业代码",
+                },
+                jscgpro_name: {
+                    required: "请输入项目名称",
+                },
+                jscg_fl: {
+                    required: "请选择对应的项目分类",
+                },
+                jscg_nf: {
+                    required: "请选择项目的年份",
+                },
+                jscg_desc: {
+                    required: "请描述项目的成果",
+                },
+                jscg_material: {
+                    required: "支持拓展名：.rar .zip .doc .docx .pdf .jpg...",
+                }
+            },
+            onfocusout: function (element) {
+                $(element).valid();
+            },
+
+        });
+
+    });
+</script>
+
+</html>

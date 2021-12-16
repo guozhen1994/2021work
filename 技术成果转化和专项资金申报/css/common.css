@@ -1,0 +1,396 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'microsoft yahei';
+}
+
+html,
+body {
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+input {
+  outline: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: ' ';
+}
+
+textarea,
+input,
+select {
+  outline: none;
+  font-family: 'microsoft yahei';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+img {
+  border: none;
+}
+
+.wrap {
+  width: 16rem;
+  margin: 0 auto;
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.jstab,
+.shqb-cc {
+  width: 700px;
+  margin: 0 auto;
+}
+.tabname {
+  float: right;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #1298a3;
+  color: #1298a3;
+  font-size: 18px;
+  padding: 0 10px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.xt-intro {
+  text-align: center;
+  line-height: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  background-color: #f2f4f7;
+  margin-bottom: 40px;
+}
+
+ul li.liitem {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.sqrli-l {
+  float: left;
+  width: 144px;
+  padding-right: 10px;
+  line-height: 48px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.85);
+  text-align: right;
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  background-color: transparent;
+}
+
+.sqrli-tl {
+  float: left;
+  width: 144px;
+  line-height: 160px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.85);
+  text-align: right;
+  height: 160px;
+  border: 1px solid #e5e5e5;
+  background-color: transparent;
+}
+
+.sqrli-l span,
+.sqrli-tl span {
+  font-weight: normal;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: rgba(204, 0, 0, 0.85);
+}
+
+.sqrli-r {
+  float: right;
+  width: calc(100% - 145px);
+}
+.select-memu {
+  float: right;
+  width: calc(100% - 145px);
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  background-color: transparent;
+  border-left: 0;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.45);
+}
+.select-memu .select-memu-title:before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  width: 16px;
+  height: 16px;
+  background: url(../img/turn.png) no-repeat;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+.select-memu.active .select-memu-title:before {
+  transform: rotate(180deg);
+}
+
+.select-memu .memu-list {
+  display: none;
+  position: absolute;
+  padding: 5px 0;
+  width: calc(100% - 145px);
+  top: 100%;
+  left: 145px;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0 10px 10px 0 rgba(13, 28, 40, 0.2);
+}
+.select-memu .memu-list .memu-item {
+  line-height: 33px;
+  cursor: pointer;
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #1a2b40;
+  display: block;
+  font-size: 14px;
+  padding-left: 15px;
+}
+.select-memu .memu-list .memu-item.on,
+.select-memu .memu-list .memu-item.on:hover {
+  background: #f1f4f7 url(../img/checkon.png) right 10px center no-repeat;
+}
+.select-memu .memu-list .memu-item:hover {
+  background: #f1f4f7;
+}
+.inputWrap {
+  position: absolute;
+  top: 1px;
+  width: calc(100% - 146px);
+  height: 100%;
+}
+.inputWrap::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  width: 16px;
+  height: 16px;
+  background: url(../img/turn.png) no-repeat;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+.select-memu.active .inputWrap::after {
+  transform: rotate(180deg);
+}
+.inputWrap ul {
+  background-color: #fff;
+}
+.inputWrap li {
+  display: inline-block;
+  background: #1298a3;
+  color: #fff;
+  padding: 5px;
+  margin: 9px 5px 5px 0;
+  border-radius: 5px;
+}
+.inputWrap li span {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  padding-right: 24px;
+  background: url(../img/close.png) right center no-repeat;
+}
+.select-memu.active .memu-list {
+  display: block;
+}
+.select-memu-input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  font-size: 16px;
+  text-indent: 20px;
+  background: url(../img/turn.png) calc(100% - 10px) center no-repeat;
+  background-size: 16px 16px;
+}
+.multCheck .select-memu-input {
+  background: none;
+}
+.sqrli-r label.error,
+.select-memu label.error {
+  position: absolute;
+  bottom: -27px;
+  font-size: 12px;
+  left: 10px;
+  padding-left: 20px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.45);
+  background: url(../img/clock.png) left center no-repeat;
+}
+
+.sqrli-r .ip1 {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  background-color: transparent;
+  border-left: 0;
+  text-indent: 1em;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.45);
+  display: block;
+}
+
+.sqrli-r select {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  border-left: 0;
+  text-indent: 1em;
+  background-color: transparent;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.45);
+  display: block;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+.text1 {
+  width: 100%;
+  height: 160px;
+  border: 1px solid #e5e5e5;
+  border-left: 0;
+  text-indent: 1em;
+  background-color: transparent;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.45);
+  display: block;
+  -webkit-appearance: none;
+  position: relative;
+  padding: 10px;
+}
+
+.text-r {
+  position: absolute;
+  right: 10px;
+  bottom: -26px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.45);
+}
+.datesty {
+  padding-right: 5px;
+}
+#file_name {
+  width: calc(100% - 112px);
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  background-color: transparent;
+  border-left: 0;
+  text-indent: 1em;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.45);
+  float: left;
+}
+.material a.input {
+  float: left;
+  margin-left: 10px;
+  width: 100px;
+  height: 48px;
+  line-height: 48px;
+  background: #1298a3;
+  color: #fff;
+  text-align: center;
+  overflow: hidden; /*去掉的话，输入框也可以点击*/
+  /* position: relative; 相对定位，为 #file 的绝对定位准备 */
+}
+.material a.input:hover {
+  background: #1298a3;
+  color: #ffffff;
+}
+.file {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 145px;
+  width: calc(100% - 145px);
+  height: 100%;
+}
+.array_btn {
+  text-align: center;
+}
+
+.array_btn a {
+  display: inline-block;
+  width: 135px;
+  height: 45px;
+  line-height: 43px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 15px;
+  border: 1px solid #e5e5e5;
+}
+
+.array_btn a.commit {
+  background-color: #1298a3;
+  border: 1px solid transparent;
+  color: #fff;
+}
+.unclick {
+  opacity: 0.7;
+}
+.formCon {
+  margin-bottom: 20px;
+}
+.fileSub {
+  margin-top: 50px;
+}
+.fileSub li {
+  height: 36px;
+  line-height: 36px;
+  position: relative;
+}
+.fileSub li em {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #1298a3 url(../img/close.png) center center no-repeat;
+}

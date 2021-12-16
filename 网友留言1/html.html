@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网友留言</title>
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <form id="form1" method="post">
+            <div class="shqb-cc" style="display: block;">
+                <div class="xt-intro">网友留言</div>
+                <ul class="clearfix">
+                    <li class="clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>留言标题：
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="ly_title">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="sqrli-l">
+                            <span>*</span>留言人：
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="ly_person">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="sqrli-l">
+                            手机号码：
+                        </div>
+                        <div class="sqrli-r sqrli-r22">
+                            <input type="text" class="ip1" name="ly_tel">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="sqrli-l">
+                            地址：
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="ly_address">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="sqrli-l">
+                            邮箱：
+                        </div>
+                        <div class="sqrli-r">
+                            <input type="text" class="ip1" name="ly_email">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="sqrli-tl">
+                            <span>*</span><em>留言内容：</em>
+                        </div>
+                        <div class="sqrli-r">
+                            <textarea class="text1" name="ly_content" maxlength="1000" onkeyup="setLength(this,1000,'wordsLength');"></textarea>
+                        </div>
+                        <p class="text-r" id="wordsLength">0/1000</p>
+                    </li>
+                </ul>
+                <div class="array_btn">
+                    <a href="javascript:;" class="btn commit">提交</a>
+                    <a href="javascript:;" class="btn">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script>
+    function setLength(obj, maxlength, id) {
+        var num = obj.value.length;
+        var leng = id; //获取右下角显示的id
+        if (num < 0) {
+            num = 0; //如果文本框文字小于零则让它显示为零
+        }
+        document.getElementById(leng).innerHTML = num + "/" + maxlength;
+        //通过id获取到span标签在页面上的显示并对它的值进行拼接,就是把计算出来的结果+最大限制字数
+    }
+    jQuery.validator.addMethod("emailCode", function(value, element) {
+        var tel = /^[1-9]\d{5}$/i;
+        return this.optional(element) || (tel.test(value));
+    }, "请输入正确的邮政编码");
+    jQuery.validator.addMethod("telephone", function(value, element) {
+        var length = value.length;
+        var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+        var tel = /^\d{3,4}-?\d{7,9}$/;
+        return this.optional(element) || (tel.test(value) || mobile.test(value));
+    }, "请输入正确的联系电话");
+    $(function() {
+        $("#form1").validate({
+            debug: false, //false表示验证通过后不要自动提交表单
+            onkeyup: false, //表示关闭按键松开时候监听验证
+            rules: { //验证规则
+                ly_title: {
+                    required: true, //必填字段
+                },
+                ly_person: {
+                    required: true, //必填字段
+                },
+                ly_tel: {
+                    telephone: true
+                },
+                ly_address: {
+                    required: true, //必填字段
+                },
+                ly_email: {
+                    email: true
+                },
+                ly_content: {
+                    required: true, //必填字段
+                    minlength: 1,
+                    maxlength: 1000
+                }
+            },
+            messages: { //自定义错误信息，默认为英文，除了在这里配置以为，还可以通过配置文件进行配置
+                ly_title: {
+                    required: "请填写留言的标题",
+                },
+                ly_person: {
+                    required: "请填写您的真实姓名",
+                },
+                ly_tel: {
+                    telephone: "请填写您常用的手机号码，方便接收验证信息"
+                },
+                ly_address: {
+                    required: "请填写您详细地址",
+                },
+                ly_email: {
+                    email: "请填写您常用的的电子邮箱，方便与您取得联系"
+                },
+                ly_content: {
+                    required: "请认真填写信件的内容，不超过1000个汉字、字母、数字、字符",
+                    minlength: "请认真填写信件的内容，不超过1000个汉字、字母、数字、字符",
+                    maxlength: "请认真填写信件的内容，不超过1000个汉字、字母、数字、字符"
+                }
+            },
+            onfocusout: function(element) {
+                $(element).valid();
+            },
+
+        });
+
+    });
+</script>
+
+</html>
