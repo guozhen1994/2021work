@@ -1,0 +1,398 @@
+DIV.page-box {
+    clear: both;
+    margin: 24px auto 0px;
+}
+
+DIV.page-box .pagination .total {
+    display: inline-block;
+    line-height: 37px;
+    height: 37px;
+    padding: 0 26px 0 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400
+}
+
+DIV.page-box .pagination .total span {
+    line-height: inherit;
+    color: rgba(53, 59, 71, .7);
+    font-size: 14px
+}
+
+DIV.page-box .pagination .jumper {
+    display: inline-block;
+    line-height: 37px;
+    vertical-align: middle;
+    font-weight: 400
+}
+
+DIV.page-box .pagination .jumper span {
+    line-height: inherit;
+    color: rgba(53, 59, 71, .7);
+    font-size: 14px
+}
+
+DIV.page-box .pagination .jumper input {
+    width: 30px;
+    height: 34px;
+    border: 1px solid #dedfe0;
+    text-align: center;
+    vertical-align: top
+}
+
+DIV.page-box .pagination .jumper input:focus {
+    outline: none
+}
+
+DIV.page-box .pagination .jumper .btn-jump {
+    width: 58px;
+    height: 34px;
+    margin-left: 10px;
+    color: rgba(53, 59, 71, .7);
+    font-size: 14px;
+    background: #fff;
+}
+
+DIV.page-box .el-pagination {
+    padding: 2px 5px;
+    color: #303133;
+    white-space: nowrap;
+    font-weight: 500
+}
+
+DIV.page-box .el-pagination:after,
+DIV.page-box .el-pagination:before {
+    display: table;
+    content: ""
+}
+
+DIV.page-box .el-pagination:after {
+    clear: both
+}
+
+DIV.page-box .el-pagination button,
+DIV.page-box .el-pagination span:not([class*=suffix]) {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 34px;
+    min-width: 35.5px;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 34px
+}
+
+DIV.page-box .el-pagination .el-input__inner {
+    text-align: center;
+    line-height: normal;
+    -moz-appearance: textfield
+}
+
+DIV.page-box .el-pagination .el-input__suffix {
+    right: 0;
+    transform: scale(.8)
+}
+
+DIV.page-box .el-pagination .el-select .el-input {
+    margin: 0 5px;
+    width: 100px
+}
+
+DIV.page-box .el-pagination .el-select .el-input .el-input__inner {
+    padding-right: 25px;
+    border-radius: 3px
+}
+
+DIV.page-box .el-pagination button {
+    padding: 0 6px;
+    border: none;
+    background: 0 0
+}
+
+DIV.page-box .el-pagination button:focus {
+    outline: 0
+}
+
+DIV.page-box .el-pagination button:hover {
+    color: #409eff
+}
+
+DIV.page-box .el-pagination button:disabled {
+    background-color: #fff;
+    color: #c0c4cc;
+    cursor: not-allowed !important;
+}
+
+DIV.page-box .el-pagination .btn-next,
+DIV.page-box .el-pagination .btn-prev {
+    margin: 0;
+    background: 50% no-repeat #fff;
+    background-size: 16px;
+    color: #303133;
+    cursor: pointer
+}
+
+DIV.page-box .el-pagination .btn-next .el-icon,
+DIV.page-box .el-pagination .btn-prev .el-icon {
+    display: block;
+    font-weight: 700;
+    font-size: 12px
+}
+
+DIV.page-box .el-pagination .el-pager li.disabled {
+    color: #c0c4cc;
+    cursor: not-allowed
+}
+
+DIV.page-box .el-pager li,
+DIV.page-box .el-pager li.btn-quicknext:hover,
+DIV.page-box .el-pager li.btn-quickprev:hover {
+    cursor: pointer
+}
+
+DIV.page-box .el-pagination--small .btn-next,
+DIV.page-box .el-pagination--small .btn-prev,
+DIV.page-box .el-pagination--small .el-pager li,
+DIV.page-box .el-pagination--small .el-pager li.btn-quicknext,
+DIV.page-box .el-pagination--small .el-pager li.btn-quickprev,
+DIV.page-box .el-pagination--small .el-pager li:last-child {
+    height: 22px;
+    min-width: 22px;
+    border-color: transparent;
+    font-size: 12px;
+    line-height: 22px
+}
+
+DIV.page-box .el-pagination--small .more:before,
+DIV.page-box .el-pagination--small li.more:before {
+    line-height: 24px
+}
+
+DIV.page-box .el-pagination--small button,
+DIV.page-box .el-pagination--small span:not([class*=suffix]) {
+    height: 22px;
+    line-height: 22px
+}
+
+DIV.page-box .el-pagination--small .el-pagination__editor,
+DIV.page-box .el-pagination--small .el-pagination__editor.el-input .el-input__inner {
+    height: 22px
+}
+
+DIV.page-box .el-pagination__sizes {
+    margin: 0 10px 0 0;
+    color: #606266;
+    font-weight: 400
+}
+
+DIV.page-box .el-pagination__sizes .el-input .el-input__inner {
+    padding-left: 8px;
+    font-size: 13px
+}
+
+DIV.page-box .el-pagination__sizes .el-input .el-input__inner:hover {
+    border-color: #409eff
+}
+
+DIV.page-box .el-pagination__total {
+    margin-right: 10px;
+    color: #606266;
+    font-weight: 400
+}
+
+DIV.page-box .el-pagination__jump {
+    margin-left: 24px;
+    color: #606266;
+    font-weight: 400
+}
+
+DIV.page-box .el-pagination__jump .el-input__inner {
+    padding: 0 3px
+}
+
+DIV.page-box .el-pagination__rightwrapper {
+    float: right
+}
+
+DIV.page-box .el-pagination__editor {
+    box-sizing: border-box;
+    margin: 0 2px;
+    padding: 0 2px;
+    height: 28px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 18px
+}
+
+DIV.page-box .el-pagination.is-background .btn-next,
+DIV.page-box .el-pager,
+DIV.page-box .el-pagination.is-background .btn-prev {
+    padding: 0
+}
+
+DIV.page-box .el-pagination__editor.el-input {
+    width: 50px
+}
+
+DIV.page-box .el-pagination__editor.el-input .el-input__inner {
+    height: 28px
+}
+
+DIV.page-box .el-pagination__editor .el-input__inner::-webkit-inner-spin-button,
+DIV.page-box .el-pagination__editor .el-input__inner::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none
+}
+
+DIV.page-box .el-pagination.is-background .btn-next,
+DIV.page-box .el-pagination.is-background .btn-prev,
+DIV.page-box .el-pagination.is-background .el-pager li {
+    margin: 0 5px;
+    min-width: 30px;
+    border-radius: 2px;
+    background-color: #f4f4f5;
+    color: #606266
+}
+
+DIV.page-box .el-pagination.is-background .btn-next.disabled,
+DIV.page-box .el-pagination.is-background .btn-next:disabled,
+DIV.page-box .el-pagination.is-background .btn-prev.disabled,
+DIV.page-box .el-pagination.is-background .btn-prev:disabled,
+DIV.page-box .el-pagination.is-background .el-pager li.disabled {
+    color: #c0c4cc
+}
+
+DIV.page-box .el-pagination.is-background .el-pager li:not(.disabled):hover {
+    color: #409eff
+}
+
+DIV.page-box .el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #409eff;
+    color: #fff
+}
+
+DIV.page-box .el-pager li,
+DIV.page-box .el-dialog {
+    -webkit-box-sizing: border-box;
+    background: #fff
+}
+
+DIV.page-box .el-pagination.is-background.el-pagination--small .btn-next,
+DIV.page-box .el-pagination.is-background.el-pagination--small .btn-prev,
+DIV.page-box .el-pagination.is-background.el-pagination--small .el-pager li {
+    margin: 0 3px;
+    min-width: 22px
+}
+
+DIV.page-box .el-pager li,
+DIV.page-box .el-pager {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top
+}
+
+DIV.page-box .el-pager {
+    list-style: none;
+    font-size: 0;
+    -ms-user-select: none;
+    user-select: none
+}
+
+DIV.page-box .el-date-table,
+DIV.page-box .el-pager,
+DIV.page-box .el-table th {
+    -webkit-user-select: none;
+    -moz-user-select: none
+}
+
+DIV.page-box .el-pager .more:before {
+    line-height: 30px
+}
+
+DIV.page-box .el-pager li {
+    box-sizing: border-box;
+    padding: 0 4px;
+    height: 34px;
+    min-width: 35.5px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 34px
+}
+
+DIV.page-box .el-menu--collapse .el-menu .el-submenu,
+DIV.page-box .el-menu--popup {
+    min-width: 200px
+}
+
+DIV.page-box .el-pager li.btn-quicknext,
+DIV.page-box .el-pager li.btn-quickprev {
+    color: #303133;
+    line-height: 28px
+}
+
+DIV.page-box .el-pager li.btn-quicknext.disabled,
+DIV.page-box .el-pager li.btn-quickprev.disabled {
+    color: #c0c4cc
+}
+
+DIV.page-box .el-pager li.number:hover {
+    color: #fff;
+    border-color: #1298A3;
+    background: #1298A3 !important;
+}
+
+DIV.page-box .el-pager li.number:hover a {
+    color: #fff;
+}
+
+DIV.page-box .el-pager li.active {
+    border-color: #1298A3;
+    background-color: #1298A3;
+    color: #fff;
+    cursor: default
+}
+
+DIV.page-box .pagination button {
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #dedfe0;
+    font-family: SimSun
+}
+
+DIV.page-box .pagination .number {
+    padding: 0 4px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(53, 59, 71, .7);
+    border: 1px solid #dedfe0;
+    margin-left: -1px;
+}
+
+DIV.page-box .pagination .number a {
+    display: block;
+}
+
+DIV.page-box .el-pagination button a {
+    display: block;
+}
+
+DIV.page-box .el-pagination .btn-prev {
+    border-radius: 4px 0 0 4px;
+}
+
+DIV.page-box .el-pagination .btn-next {
+    border-radius: 0 4px 0 4px;
+    margin-left: -1px;
+}
+
+DIV.page-box .pagination .jumper .btn-jump {
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+DIV.page-box .pagination .jumper input {
+    border-radius: 4px;
+    width: 52px;
+}

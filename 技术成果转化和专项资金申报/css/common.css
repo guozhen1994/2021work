@@ -394,3 +394,29 @@ ul li.liitem {
   cursor: pointer;
   background: #1298a3 url(../img/close.png) center center no-repeat;
 }
+.newLine .sqrli-l{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  line-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.fileSubLook {
+  width: 100%;
+  height: 100%;
+  line-height: 48px;
+  position: relative;
+  text-indent: 1em;
+  border: 1px solid #e5e5e5;
+  border-left: 0;
+}
+.fileSubLook li {
+  float: left;
+  padding: 0 8px;
+}
+.fileSubLook li .linkhref {
+  color: #1298a3;
+  cursor: pointer;
+}
